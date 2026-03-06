@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
 import Layout_Base from "./Layout_Base.astro"
 
 interface Props{
@@ -77,6 +78,7 @@ const ogAlternates = Object.entries(allLocales).filter(([lang]) => lang !== lang
             })} />
 	</head>
 	<body>
+        <Navbar language={language} client:load/>
         <main>
 		    <slot />
         </main>
