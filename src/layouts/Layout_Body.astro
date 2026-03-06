@@ -1,0 +1,85 @@
+---
+import Footer from "../components/Footer"
+import Layout_Base from "./Layout_Base.astro"
+
+interface Props{
+	language: "de" | "en" | "fr"
+	description: string
+	title: string
+	featureImageAlt: string
+	appstoreLang: "ch" | "us" | "fr"
+	appName: string
+}
+
+const { language, description, title, featureImageAlt, appstoreLang, appName } = Astro.props;
+
+const allLocales = { 
+	de: "de_DE", 
+	en: "en_US", 
+	fr: "fr_FR" 
+}
+
+const ogLocale = allLocales[language] ?? "de_DE"
+const ogAlternates = Object.entries(allLocales).filter(([lang]) => lang !== language)
+---
+
+<Layout_Base language={language}>
+    <head>
+		<meta charset="UTF-8">
+        <meta name="viewport"                   content="width=device-width, initial-scale=1.0">
+        <meta name="description"                content={description}>
+        <meta name="author"                     content="Marcel Weber">
+        <link rel="apple-touch-icon"            sizes="180x180"     href="../src/assets/icon/apple-touch-icon.png">
+        <link rel="icon"                        type="image/png"    sizes="32x32" href="../src/assets/icon/favicon-32x32.png">
+        <link rel="icon"                        type="image/png"    sizes="16x16" href="../src/assets/icon/favicon-16x16.png">
+        <link rel="manifest"                    href="/site.webmanifest">
+        <link rel="stylesheet"                  href="/styles.css" />
+        <link rel="canonical"                   href=`https://arsenal-app.ch/${language}/`>
+        <link rel="alternate"                   hreflang="en"           href="https://arsenal-app.ch/en/">
+        <link rel="alternate"                   hreflang="de"           href="https://arsenal-app.ch/de/">
+        <link rel="alternate"                   hreflang="fr"           href="https://arsenal-app.ch/fr/">
+        <link rel="alternate"                   hreflang="x-default"    href="https://arsenal-app.ch">
+        <title>{title}</title>
+        <meta property="og:title"               content={title} />
+        <meta property="og:description"         content={description} />
+        <meta property="og:locale"              content={ogLocale} />
+		{ogAlternates.map(([_, locale]) => (
+  			<meta property="og:locale:alternate" content={locale} />
+		))}
+        <meta property="og:image"               content=`https://arsenal-app.ch/assets/feature_${language}.png` />
+        <meta property="og:image:alt"           content={featureImageAlt} />
+        <meta property="og:url"                 content=`https://arsenal-app.ch/${language}/` />
+        <meta property="og:type"                content="website" />
+        <script type="application/ld+json" set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": appName,
+                "operatingSystem": "Android, iOS",
+                "applicationCategory": "UtilitiesApplication",
+                "description": description,
+                "url": `https://arsenal-app.ch/${language}/`,
+                "inLanguage": ["de", "en", "fr", "it", "rm"],
+                "author": {
+                    "@type": "Person",
+                    "name": "Marcel Weber",
+                    "url": "https://mrweber.ch"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "5.00",
+                    "priceCurrency": "CHF"
+                },
+                "downloadUrl": [
+                    "https://play.google.com/store/apps/details?id=com.m00gendai.arsenal",
+                    `https://apps.apple.com/${appstoreLang}/app/arsenal-armamentarium/id6670214648`
+                ],
+                "image": "https://arsenal-app.ch/assets/appIcon.png"
+            })} />
+	</head>
+	<body>
+        <main>
+		    <slot />
+        </main>
+		<Footer language={language}/>
+	</body>
+</Layout_Base>

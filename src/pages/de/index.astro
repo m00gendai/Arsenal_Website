@@ -1,0 +1,34 @@
+---
+import Appstores from '../../components/Appstores';
+import Details from '../../components/Details/details';
+import FeatureImage from '../../components/FeatureImage';
+import Gallery from '../../components/Gallery';
+import Navbar from '../../components/Navbar';
+import SalesPitch from '../../components/SalesPitch';
+import Layout_Body from '../../layouts/Layout_Body.astro';
+import type { Language } from '../../types/types_global';
+
+const language:Language = "de"
+---
+
+<Layout_Body 
+	language={language}
+	description={"Verwalten Sie Ihre Waffensammlung, den Munitionsbestand, Ihr Zubehör, Waffenbestandteile und Fachliteratur mit dieser bequemen App!"}
+	title={"Arsenal - Die Schweizer App für Waffensammler"}
+	featureImageAlt={"Vorstellungsbild von einigen Screenshots der App in Aktion"}
+	appstoreLang={"ch"}
+	appName={"Arsenal Waffen & Sammlung"}
+>
+	<Navbar language={language} client:load/>
+
+	<FeatureImage src={language} alt={"Vorstellungsbild von einigen Screenshots der App in Aktion"} />
+
+	<Appstores language={language} />
+
+	<SalesPitch language={language} />
+
+	<Gallery />
+
+	<Details language={language} />
+
+</Layout_Body>

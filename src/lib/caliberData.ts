@@ -1,0 +1,1043 @@
+interface Caliber{
+    range: string
+    variants: {
+        name: string
+        displayName?: string
+    }[]
+}
+
+export const calibers:Caliber[] = [
+    {
+        range: "2mm (.79 - .117)",
+        variants: [
+            {"name": ".10 Eichelberger Long Rifle"},
+            {"name": ".10 Eichelberger Pup"},
+            {"name": ".10 Eichelberger Squirrel"},
+            {"name": "2.34mm rimfire"},
+            {"name": "2mm pinfire"},
+            {"name": "2mm Kolibri"}
+        ],
+    },
+    {
+        range: "3mm (.118 - .156)",
+        variants: [
+            {"name": ".12 Cooper"},
+            {"name": ".12 Eichelberger Carbine"},
+            {"name": ".12 Eichelberger Long Rifle"},
+            {"name": ".12 Eichelberger Win Mag RF"},
+            {"name": ".14 Cooper"},
+            {"name": ".14 Eichelberger Bee"},
+            {"name": ".14 Eichelberger Dart"},
+            {"name": ".14 Jet Junior"},
+            {"name": ".14 Walker Hornet"},
+            {"name": ".14-222"},
+            {"name": ".14/222 Eichelberger Mag"},
+            {"name": "3mm Kolibri"},
+            {"name": "3mm US"}
+        ],
+    },
+    {
+        range: "4mm (.157 - .196)",
+        variants: [
+            {"name": ".17 Ackley Bee"},
+            {"name": ".17 Bumble Bee"},
+            {"name": ".17 HMR"},
+            {"name": ".17 Hornet"},
+            {"name": ".17 Mach 2"},
+            {"name": ".17 Mach IV"},
+            {"name": ".17 PMC/Aguila"},
+            {"name": ".17 Remington"},
+            {"name": ".17 Remington Fireball"},
+            {"name": ".17 Winchester Super Magnum"},
+            {"name": "4mm Lienhard"},
+            {"name": "4mm M20 (4x10 mm)"},
+            {"name": "4.25mm Liliput"},
+            {"name": "4.38x30mm Libra"},
+            {"name": "4.5x26mm MKR"},
+            {"name": "4.5x40mmR"},
+            {"name": "4.6x30mm HK"},
+            {"name": "4.6x36mm"},
+            {"name": "4.85x49mm"}
+        ],
+    },
+    {
+        range: "5mm (.197 - .235)",
+        variants: [
+            {"name": ".19 Badger"},
+            {"name": ".19 Calhoon Hornet"},
+            {"name": ".19-223"},
+            {"name": ".20 Tactical"},
+            {"name": ".20 VarTarg"},
+            {"name": ".204 Ruger"},
+            {"name": ".21 Sharp"},
+            {"name": ".218 Bee"},
+            {"name": ".219 Zipper"},
+            {"name": ".22 BB"},
+            {"name": ".22 CB"},
+            {"name": ".22 Creedmoor"},
+            {"name": ".22 Hornet"},
+            {"name": ".22 Long"},
+            {"name": ".22 Long Rifle"},
+            {"name": ".22 Remington Jet"},
+            {"name": ".22 Remington Special"},
+            {"name": ".22 Savage Hi-Power"},
+            {"name": ".22 Short"},
+            {"name": ".22 Spitfire"},
+            {"name": ".22 TCM"},
+            {"name": ".22 Winchester Centerfire"},
+            {
+                "name": ".22 Winchester Magnum Rimfire (.22 Magnum)",
+                "displayName": ".22 Magnum"
+            },
+            {"name": ".220 Russian"},
+            {"name": ".220 Swift"},
+            {"name": ".221 Remington Fireball"},
+            {"name": ".222 Remington"},
+            {"name": ".222 Remington Magnum"},
+            {"name": ".223 Remington"},
+            {"name": ".223 WSSM"},
+            {"name": ".225 Winchester"},
+            {"name": ".224 Weatherby Magnum"},
+            {"name": "20 Nosler"},
+            {"name": "22 Nosler"},
+            {"name": "22 PPC-USA"},
+            {"name": "224 Valkyrie"},
+            {"name": "5.43mm Louis Mattis"},
+            {"name": "5.45x18mm Soviet"},
+            {"name": "5.45x39mm"},
+            {"name": "5.5mm Velo Dog"},
+            {"name": "5.56x45mm NATO"},
+            {"name": "5.6mm GP90 (1990)"},
+            {"name": "5.6x35mmR Vierling"},
+            {"name": "5.6x50mm Magnum (5.6x50mmR)"},
+            {"name": "5.6x57mm"},
+            {"name": "5.66x39mm"},
+            {"name": "5.8x21mm"},
+            {"name": "5.8x42mm DBP87"},
+            {"name": "5mm Bergmann"},
+            {"name": "5mm Bergmann Rimless"},
+            {"name": "5mm Clement"},
+            {"name": "5mm Craig"},
+            {"name": "5mm Pickert"},
+            {"name": "5mm Remington Rimfire Magnum"},
+            {"name": "5mm/35 SMc"},
+            {"name": "FN 5.7x28mm"}
+          ],
+    },
+    {
+        range: "6mm (.236 - .275)",
+        variants: [
+            {"name": ".240 Apex"},
+            {"name": ".240 Weatherby Magnum"},
+            {"name": ".243 Winchester"},
+            {"name": ".243 WSSM"},
+            {"name": ".244 H&H Magnum"},
+            {"name": ".25 ACP (.25 Auto)"},
+            {"name": "6.35mm Browning"},
+            {"name": ".25 NAA"},
+            {"name": ".25 Remington"},
+            {"name": ".25 WSSM"},
+            {"name": ".25-06 Remington"},
+            {"name": ".25-20 Winchester"},
+            {"name": ".25-25 Stevens"},
+            {"name": ".25-35 Winchester"},
+            {"name": ".25-45 Sharps"},
+            {"name": ".250-3000 Savage"},
+            {"name": ".256 Newton"},
+            {"name": ".256 Win Magnum"},
+            {"name": ".257 Roberts"},
+            {"name": ".257 Weatherby Magnum"},
+            {"name": ".260 Remington"},
+            {"name": ".264 Winchester Magnum"},
+            {"name": "24 Nosler"},
+            {"name": "255 GS"},
+            {"name": "26 Nosler"},
+            {"name": "6,5 G.A.P. 4S"},
+            {"name": "6mm AR"},
+            {"name": "6mm ARC"},
+            {"name": "6mm BR"},
+            {"name": "6mm Creedmoor"},
+            {"name": "6mm GT"},
+            {"name": "6mm Lee Navy"},
+            {"name": "6mm PPC"},
+            {"name": "6mm Remington (.244 Remington)"},
+            {"name": "6mm XC"},
+            {"name": "6x45mm"},
+            {"name": "6x45mm SAW"},
+            {
+                "name": "6.45mm GP80 (1980) 6.45x48mm",
+                "displayName": "6.45mm GP80"
+            },
+            {"name": "6.45x48mm XPL Swiss"},
+            {"name": "6.5 Precision Rifle Cartridge"},
+            {"name": "6.5 Weatherby Rebated Precision Magnum"},
+            {"name": "6.5-06 A-Square"},
+            {"name": "6.5-284 Norma"},
+            {"name": "6.5-300 Weatherby Magnum"},
+            {"name": "6.5x25mm CBJ"},
+            {"name": "6.5x47mm Lapua"},
+            {"name": "6.5x50mmSR Arisaka"},
+            {"name": "6.5x52mm Carcano"},
+            {"name": "6.5x53mmR"},
+            {"name": "6.5x54mm Mannlicher–Schönauer"},
+            {
+                "name": "6.5x55mm Swedish (aka 6.5x55mm Krag)",
+                "displayName": "6.5x55mm Swedish"
+            },
+            {"name": "6.5x57mm Mauser"},
+            {"name": "6.5x58mm Vergueiro"},
+            {"name": "6.5x68mm"},
+            {"name": "6.5mm Bergmann"},
+            {"name": "6.5mm Creedmoor"},
+            {"name": "6.5mm Grendel"},
+            {"name": "6.5mm Remington Magnum"}
+          ],          
+    },
+    {
+        range: "7mm (.276 - .314)",
+        variants: [
+            {"name": ".270 British"},
+            {"name": ".270 Weatherby Magnum"},
+            {"name": ".270 Winchester"},
+            {"name": ".270 Winchester Short Magnum"},
+            {"name": ".276 Enfield"},
+            {"name": ".276 Pedersen"},
+            {"name": ".277 FURY"},
+            {"name": ".277 Wolverine"},
+            {"name": ".27 Nosler"},
+            {"name": ".280 Ackley Improved"},
+            {"name": ".280 British"},
+            {"name": ".280 Remington"},
+            {"name": ".280 Ross"},
+            {"name": ".280/30 British"},
+            {"name": ".284 Winchester"},
+            {"name": ".28 Nosler"},
+            {"name": ".30 AMP"},
+            {"name": ".30 Carbine"},
+            {"name": ".30 Newton"},
+            {"name": ".30 Pedersen"},
+            {"name": ".30 Remington"},
+            {"name": ".30 Short"},
+            {"name": ".30 Super Carry"},
+            {"name": ".30-03 Springfield"},
+            {"name": ".30-06 Springfield"},
+            {"name": ".30-30 Winchester"},
+            {"name": ".30-40 Krag"},
+            {"name": ".30-378 Weatherby Magnum"},
+            {"name": ".300 H&H Magnum"},
+            {"name": ".300 Lapua Magnum"},
+            {"name": ".300 LRH"},
+            {"name": ".300 Norma Magnum"},
+            {"name": ".300 RUM"},
+            {"name": ".300 RSAUM"},
+            {"name": ".300 Savage"},
+            {"name": ".300 Weatherby Magnum"},
+            {"name": ".300 Werewolf"},
+            {"name": ".300 Winchester Magnum"},
+            {
+                "name": ".300 WSM (Winchester Short Magnum)",
+                "displayName": ".300 WSM"
+            },
+            {"name": "300 AAC Blackout"},
+            {"name": "300 HAM'R"},
+            {"name": "300 Precision Rifle Cartridge"},
+            {"name": "300 Ruger Compact Magnum"},
+            {"name": "30 BR"},
+            {"name": "30 Remington AR"},
+            {"name": ".307 Winchester"},
+            {"name": ".308 Norma Magnum"},
+            {"name": ".308 Winchester"},
+             {"name": ".30 Herrett"},
+            {"name": ".32 ACP (7.65 Browning Short)"},
+            {"name": ".32 H&R Magnum"},
+            {"name": ".32 Long Colt (.32 Colt)"},
+            {"name": ".32 NAA"},
+            {"name": ".32 S&W Long (.32 Colt New Police)"},
+            {"name": ".32 Short Colt (.320 Revolver)"},
+            {"name": ".32 Smith & Wesson"},
+            {"name": ".32-20 Winchester .32-20 WCF"},
+            {"name": ".327 Federal Magnum"},
+            {"name": ".303 British"},
+            {"name": ".303 Savage"},
+            {"name": ".30-378 Weatherby Magnum"},
+            {"name": "6.8 Western"},
+            {"name": "6.8mm Remington SPC"},
+            {"name": "7-30 Waters"},
+            {"name": "7.5 FK BRNO"},
+            {"name": "7.5x22mmR Nagant"},
+            {"name": "7.5x23mmR"},
+            {"name": "7.5x54mm French"},
+            {"name": "7.5x55mm Swiss"},
+            {"name": "7.5x56mm MAS Mod.1929"},
+            {"name": "7.5x58mm French (7.5x58 MAS)"},
+            {"name": "7.5mm GP11 (1911) 7.5x55mm"},
+            {"name": "7.5mm GP90 (1890) 7.5x53mm"},
+            {"name": "7.5mm GP90/03 (1890) 7.5x53mm"},
+            {"name": "7.5mm GP90/23 (1890) 7.5x53mm"},
+            {"name": "7.5mm Rev Pat 82 (1882) 7.5x23mmR"},
+            {"name": "7.62x25mm Tokarev"},
+            {"name": "7.62x38mmR"},
+            {"name": "7.62x39mm M43"},
+            {"name": "7.62x40mm Wilson Tactical"},
+            {"name": "7.62x42mm"},
+            {"name": "7.62x45mm"},
+            {"name": "7.62x51mm NATO"},
+            {"name": "7.62x53mmR"},
+            {"name": "7.62x54mmR"},
+            {"name": "7.63x25mm Mauser"},
+            {"name": "7.65mm Longue"},
+            {"name": "7.65mm Mannlicher"},
+            {"name": "7.65mm Pist Pat 03 7.65x21mm"},
+            {"name": "7.65mm Roth–Sauer"},
+            {
+                "name": "7.65x21mm Parabellum (7.65 mm Luger)",
+                "displayName": "7.65mm Parabellum"
+            },
+            {"name": "7.65x25mm Borchardt"},
+            {"name": "7.65x53mm Argentine"},
+            {"name": "7.7x58mm Arisaka"},
+            {"name": "7.82 Warbird"},
+            {"name": "7x20mm Nambu"},
+            {"name": "7x33mm Sako"},
+            {"name": "7x57mm Mauser"},
+            {"name": "7x64mm"},
+            {"name": "7x61mm Sharpe & Hart"},
+            {"name": "7.92x24mm VBR"},
+            {"name": "7mm BR Remington (bench rest)"},
+            {"name": "7mm Dakota"},
+            {"name": "7mm Mauser Spanish Mauser .275 Rigby"},
+            {
+                "name": "7mm PRC (Precision Rifle Cartridge)",
+                "displayName": "7mm PRC"
+            },
+            {"name": "7mm Raptor"},
+            {"name": "7mm Remington Express"},
+            {"name": "7mm Remington Magnum"},
+            {"name": "7mm Remington SAUM"},
+            {"name": "7mm Remington Ultra Magnum"},
+            {
+                "name": "7mm STW (Shooting Times Westerner)",
+                "displayName": "7mm STW"
+            },
+            {"name": "7mm Weatherby Magnum"},
+            {"name": "7mm WSM"},
+            {"name": "7mm-06 Remington"},
+            {"name": "7mm-08 Remington"},
+            {
+                "name": "7.5mm 1882 Ordnance 7.5mm Swiss Army Revolver", 
+                "displayName": "7.5mm Siwss Army Revolver"
+            },
+            {"name": "7.5mm Swedish Nagant"},
+            {"name": "7.92x33mm Kurz"}
+          ],                 
+    },
+    {
+        range: "8mm (.315 - .353)",
+        variants: [
+            {"name": ".30 Super Carry"},
+            {"name": ".320 Revolver"},
+            {
+                "name": ".32 ACP (.32 Auto)",
+                "displayName": ".32 ACP"
+            },
+            {"name": ".32 Ballard Extra Long"},
+            {"name": ".32 H&R Magnum"},
+            {"name": ".32 Remington"},
+            {
+                "name": ".32 S&W (.32 S&W Short)",
+                "displayName": ".32 S&W"
+            },
+            {"name": ".32 S&W Long"},
+            {"name": ".32 Winchester Self-Loading"},
+            {"name": ".32 Winchester Special"},
+            {"name": ".32-40 Ballard"},
+            {"name": ".325 WSM"},
+            {"name": ".327 Federal Magnum"},
+            {"name": ".333 Jeffery Flanged"},
+            {"name": ".33 Nosler"},
+            {"name": ".33 Winchester"},
+            {"name": ".338 Blaser Mag."},
+            {"name": ".338 Edge"},
+            {"name": ".338 Federal"},
+            {"name": ".338 Lapua Magnum"},
+            {"name": ".338 Marlin Express"},
+            {"name": ".338 Norma Magnum"},
+            {"name": ".338 Remington Ultra Magnum"},
+            {"name": ".338 Ruger Compact Magnum"},
+            {"name": ".338 Weatherby RPM"},
+            {"name": ".338 Whisper"},
+            {"name": ".338 Winchester Magnum"},
+            {"name": ".338-06"},
+            {"name": ".338-378 Weatherby Magnum"},
+            {"name": ".340 Weatherby Magnum"},
+            {"name": ".348 Winchester"},
+            {"name": "8,5 x 68 Fanzoj"},
+            {"name": "8.6 mm Blackout"},
+            {
+                "name": "8mm French Ordnance 8mm Lebel Revolver 8x27mmR Règlementaire Mle 92",
+                "displayName": "8mm Lebel Revolver"
+            },
+            {"name": "8mm Lebel"},
+            {"name": "8mm Remington Magnum"},
+            {"name": "8mm Roth–Steyr"},
+            {"name": "8x22mm Nambu"},
+            {"name": "8x50mmR Mannlicher"},
+            {"name": "8x52mmR Mannlicher"},
+            {"name": "8x56mmR Kropatschek"},
+            {"name": "8x56mmR Mannlicher"},
+            {"name": "8x57mm IS/8mm Mauser"},
+            {"name": "8x58mmR Danish Krag"},
+            {"name": "8x59mm RB Breda"},
+            {"name": "8x60mm S"},
+            {"name": "8x63mm patron m/32"},
+            {"name": "8x64mm S"},
+            {"name": "8x68mm S"}
+        ],        
+    },
+    {
+        range: "9mm (.354 - .393)",
+        variants: [
+            {"name": ".35 Remington"},
+            {"name": ".35 Whelen"},
+            {"name": ".35 Winchester"},
+            {"name": ".35 Winchester Self-Loading"},
+            {"name": ".351 Winchester Self-Loading"},
+            {"name": ".356 TSW"},
+            {"name": ".356 Winchester"},
+            {"name": ".357 SIG"},
+            {
+                "name": ".357 S&W Magnum",
+                "displayName": ".357 Magnum"
+            },
+            {"name": ".357 SuperMag"},
+            {"name": ".357/44 Bain & Davis"},
+            {"name": ".357 Remington Maximum"},
+            {"name": ".358 Norma Magnum"},
+            {"name": ".358 Winchester"},
+            {"name": ".36 Nosler"},
+            {"name": ".360 Buckhammer"},
+            {"name": ".375 Winchester"},
+            {"name": ".375 SuperMag"},
+            {
+                "name": ".375 Chey Tac (9.5x77mm)",
+                "displayName": ".375 Chey Tac"
+            },
+            {"name": ".375 H&H Magnum"},
+            {"name": ".375 Remington Ultra Magnum"},
+            {"name": ".375 Ruger"},
+            {"name": ".375 SWISS P"},
+            {"name": ".375 Weatherby Magnum"},
+            {"name": ".376 Steyr"},
+            {"name": ".378 Weatherby Magnum"},
+            {
+                "name": ".38 ACP (.38 Auto; 9x23mmSR)",
+                "displayName": ".38 ACP"
+            },
+            {
+                "name": ".38 AMU (.38 Army Marksmanship Unit)",
+                "displayName": ".38 AMU"
+            },
+            {"name": ".38 Short Colt"},
+            {"name": ".38 Long Colt"},
+            {
+                "name": ".38 S&W (.38 S&W Short)",
+                "displayName": ".38 S&W"
+            },
+            {"name": ".38 S&W Special"},
+            {
+                "name": ".38 Super (.38 Super Auto; 9x23mmSR)",
+                "displayName": ".38 Super"
+            },
+            {
+                "name": ".38/.45 Clerke (.38/45 Auto)",
+                "displayName": ".38/.45 Clerke"
+            },
+            {"name": ".38-55 Winchester"},
+            {"name": ".38-56 WCF"},
+            {"name": ".38-72 Winchester"},
+            {"name": ".375-416"},
+            {"name": ".375 Snipe Tac"},
+            {"name": ".375 SOE"},
+            {
+                "name": ".380 ACP (.380 Auto; 9x17mm)",
+                "displayName": ".380 ACP"
+            },
+            {"name": ".960 Rowland"},
+            {"name": "9.3x57mm Mauser"},
+            {"name": "9.3x62mm"},
+            {"name": "9.3x64mm Brenneke"},
+            {"name": "9.3x66 Sako"},
+            {"name": "9.3x72mmR"},
+            {"name": "9.3x74mmR"},
+            {"name": "9.4x22mmR Nagant"},
+            {"name": "9mm Action Express"},
+            {"name": "9mm Automatic"},
+            {"name": "9mm Browning Long"},
+            {"name": "9mm Federal (9x19mmR)"},
+            {"name": "9mm Glisenti"},
+            {"name": "9mm Japanese"},
+            {"name": "9mm Jonson"},
+            {"name": "9mm Winchester Magnum"},
+            {"name": "9x18mm Makarov"},
+            {"name": "9x18mm Ultra"},
+            {
+                "name": "9x19mm Parabellum (9mm Luger / Pist Pat 41 / Pist Pat 14)",
+                "displayName": "9x19mm Parabellum"
+            },
+            {"name": "9x21mm"},
+            {"name": "9x21mm Gyurza"},
+            {"name": "9x23mm Largo"},
+            {"name": "9x23mm Steyr"},
+            {"name": "9x23mm Winchester"},
+            {"name": "9x25mm Dillon"},
+            {"name": "9x25mm Mauser"},
+            {"name": "9x25mm Super Auto G"},
+            {"name": "9x30mm Grom"},
+            {"name": "9x39mm"},
+            {"name": "9x57mm Mauser"}
+        ],        
+    },
+    {
+        range: "10mm (.394 - .432)",
+        variants: [
+            {"name": ".38-40 Winchester"},
+            {"name": ".38-72 Winchester"},
+            {"name": ".40 S&W"},
+            {"name": ".40 Super"},
+            {"name": ".40-60 Winchester"},
+            {"name": ".40-72 Winchester"},
+            {"name": ".400 Corbon"},
+            {"name": ".400 Legend"},
+            {"name": ".401 Winchester Self-Loading"},
+            {"name": ".404 Jeffery"},
+            {"name": ".405 Winchester"},
+            {"name": ".408 Chey Tac"},
+            {"name": ".414 Super Magnum"},
+            {"name": ".416 Barrett"},
+            {"name": ".416 Remington Magnum"},
+            {"name": ".416 Rigby"},
+            {"name": ".416 Ruger"},
+            {"name": ".416 Weatherby Magnum"},
+            {"name": ".41 Action Express"},
+            {"name": ".41 Magnum"},
+            {"name": ".41 Short (.41 Rimfire)"},
+            {"name": ".41 Short Colt"},
+            {"name": ".41 Special"},
+            {"name": ".44 AMP"},
+            {"name": ".44 Russian"},
+            {"name": ".44 Special"},
+            {"name": ".44 Magnum"},
+            {"name": ".44-40 Winchester"},
+            {"name": ".444 Marlin"},
+            {"name": ".445 Super Magnum"},
+            {"name": ".450/400 3 inch Nitro Express"},
+            {"name": "10.3x60R"},
+            {"name": "10.3x68 Magnum"},
+            {"name": "10.4 mm Italian"},
+            {"name": "10.4x38mm Swiss Rimfire"},
+            {"name": "10.4x47mm Italian M/70 Centerfire"},
+            {"name": "10.75x68mm Mauser"},
+            {"name": "10mm Auto"},
+            {"name": "10mm Magnum"},
+            {"name": "11 mm German Serv"}
+        ],        
+    },
+    {
+        range: "11mm (.433 - .471)",
+        variants: [
+            {
+                "name": ".45 ACP (.45 Auto)",
+                "displayName": ".45 ACP"
+            },
+            {"name": ".45 GAP"},
+            {"name": ".45 Remington–Thompson"},
+            {"name": ".45 Super"},
+            {"name": ".45 Winchester Magnum"},
+            {"name": ".455 Webley Auto"},
+            {"name": ".460 Rowland"},
+            {"name": "11.35mm Schouboe"},
+            {"name": "11mm French Ordnance"},
+            {"name": "11mm German Service"},
+            {"name": ".44 S&W Special"},
+            {"name": ".44 Remington Magnum"},
+            {"name": ".44 S&W Russian"},
+            {"name": ".44 S&W American"},
+            {"name": ".44 Webley (.442 R.I.C.)"},
+            {"name": ".44 Bulldog"},
+            {"name": ".44 Colt"},
+            {"name": "11.75mm Montenegrin"},
+            {"name": ".45 Webley"},
+            {"name": ".45 Auto Rim"},
+            {"name": ".454 Magnum"},
+            {"name": ".45 Schofield (.45 Smith & Wesson)"},
+            {
+                "name": ".45 Colt (.45 Long Colt)",
+                "displayName": ".45 Long Colt"
+            },
+            {"name": ".454 Casull"},
+            {"name": ".460 S&W Magnum"},
+            {"name": ".455 Webley (.455 Webley Mk II)"},
+            {"name": ".455 Webley (.455 Colt)"},
+            {"name": ".450 Adams (.450 Boxer Mk I)"},
+            {"name": ".476 Enfield (.476 Eley)"},
+            {"name": ".44-40 Winchester"},
+            {"name": ".444 Marlin"},
+            {"name": "10.75mm Russian Berdan"},
+            {"name": "11mm Murata"},
+            {"name": ".425 Westley Richards Magnum"},
+            {"name": "11.15mm Spanish Remington"},
+            {"name": "11mm Belgian Albini"},
+            {"name": "11mm Belgian Comblain"},
+            {"name": "11.2x72mm Schüler"},
+            {"name": "11.2x60mm Schüler (Mauser)"},
+            {"name": "10.8x47mmR Martini Target"},
+            {"name": "11.15x42mmR M/67 and 11x58mmR M/77 Werndl"},
+            {"name": "11mm French Gras"},
+            {"name": ".44 Henry"},
+            {"name": "11.15mm Mauser"},
+            {"name": "11.43mm Turkish"},
+            {"name": "11.43mm Egyptian"},
+            {"name": "11.4mm Werndl M/73"},
+            {"name": ".500/450 Black Powder No.2 Musket"},
+            {"name": "11.4mm Brazilian Comblain"},
+            {"name": ".450 Bushmaster"},
+            {"name": ".45 Raptor"},
+            {"name": "11.5mm Spanish Reformado"},
+            {"name": "11.7mm Danish Remington"},
+            {"name": ".500/450 Magnum Nitro Express"},
+            {"name": ".450 No 2 Nitro Express (31⁄2\")"},
+            {"name": ".577/450 Martini–Henry"},
+            {"name": ".45-75 Winchester"},
+            {"name": ".45-70 Government"},
+            {"name": "11mm Beaumont M/71/78"},
+            {"name": ".450 Marlin"},
+            {"name": ".450 Nitro Express (31⁄4\")"},
+            {"name": ".458 Winchester Magnum"},
+            {"name": ".458 SOCOM"},
+            {"name": ".460 Weatherby Magnum"},
+            {"name": ".460 Steyr"},
+            {"name": ".500/450 No.1 Express"},
+            {"name": ".450 Rigby Rimless"},
+            {"name": ".45-60 Winchester"},
+            {"name": "11.3mm Beaumont M/71"},
+            {"name": ".457 Wild West Guns"},
+            {"name": ".458 Lott"},
+            {"name": ".500/465 Nitro Express"},
+            {"name": ".465 H&H Magnum"}
+          ],
+    },
+    {
+        range: "12mm (.472 - .510)",
+        variants: [
+            {"name": ".470 Capstick"},
+            {"name": ".470 Nitro Express"},
+            {"name": ".475 A&M Magnum"},
+            {"name": ".475 Linebaugh"},
+            {"name": ".475 Nitro Express"},
+            {"name": ".475 No. 2 Nitro Express"},
+            {"name": ".475 Wildey Magnum"},
+            {"name": ".476 Nitro Express"},
+            {"name": ".480 Ruger"},
+            {"name": ".50 Action Express"},
+            {"name": ".50 Alaskan"},
+            {"name": ".50 Auto Max"},
+            {"name": ".50 Beowulf"},
+            {"name": ".50 BMG (12.7x99mm NATO)"},
+            {"name": ".50 Bushwhacker"},
+            {"name": ".50 GI"},
+            {"name": ".500 Auto Max"},
+            {"name": ".500 Linebaugh"},
+            {"name": ".500 No. 2 Express (.577/500)"},
+            {"name": ".500 S&W Magnum"},
+            {"name": ".500 S&W Special"},
+            {"name": ".500 Wyoming Express"},
+            {"name": ".505 Gibbs"},
+            {"name": ".510 DTC Europ (.50 DTC)"},
+            {"name": ".510 Whisper"},
+            {"name": ".577/.500 Magnum Nitro Express"},
+            {"name": "12.7x108mm"},
+            {"name": "12.7x55mm STs-130"},
+            {"name": "12.7x81mmSR (50 British)"}
+        ],        
+    },
+    {
+        range: "13mm (.511 +)",
+        variants: [
+            {"name": ".500 Linebaugh"},
+            {"name": ".500 Nitro Express"},
+            {"name": ".50-70 Government"},
+            {"name": ".50-90 Sharps"},
+            {"name": ".50-110 Winchester"},
+            {"name": ".50-140 Sharps"},
+            {"name": ".55 Boys (13.9x99mmB)"},
+            {"name": ".56-56 Spencer"},
+            {"name": ".577 Nitro Express"},
+            {"name": ".577 Snider"},
+            {"name": ".577 Tyrannosaur"},
+            {"name": ".585 Nyati"},
+            {"name": ".600 Nitro Express"},
+            {"name": ".600 Overkill"},
+            {"name": ".700 Nitro Express"},
+            {"name": ".70-150 Winchester"},
+            {"name": ".950 JDJ (24.1x70mm)"},
+            {"name": "13mm Gyrojet"},
+            {"name": "13x64mm"},
+            {"name": "13.2mm TuF (13.2x92mmSR)"},
+            {"name": "13.2x99mm Hotchkiss"},
+            {"name": "14.5x114mm"},
+            {"name": "14.5х148"},
+            {"name": "14.5х218"},
+            {"name": "14.5mm JDJ"},
+            {"name": "14x33mmR Wänzl"},
+            {"name": "15.24х40R Krnka"},
+            {"name": "15.5х106 BRG"},
+            {"name": "15х104 Brno"},
+            {"name": "20.3х95R Ghan"},
+            {"name": "20х150R"},
+            {"name": "23x152mmB"}
+          ],          
+    },
+    {
+    range: "20mm",
+    variants: [
+        { "name": "20×70RB (Oerlikon F)" },
+        { "name": "20×72RB (Oerlikon S)" },
+        { "name": "20×101RB (Oerlikon FF)" },
+        { "name": "20×110RB (Oerlikon S)" },
+        { "name": "20×138B (Long Solothurn)" },
+        { "name": "20×102mm" }
+    ]
+    },
+    {
+    range: "23mm",
+    variants: [
+        { "name": "23×152B" }
+    ]
+    },
+    {
+    range: "25mm",
+    variants: [
+        { "name": "25×137mm" },
+        { "name": "25×163mm" }
+    ]
+    },
+    {
+    range: "30mm",
+    variants: [
+        { "name": "30×113B" },
+        { "name": "30×165mm" },
+        { "name": "30×173mm" }
+    ]
+    },
+    {
+    range: "37mm",
+    variants: [
+        { "name": "37×252SR" },
+        { "name": "37×263B" }
+    ]
+    },
+    {
+    range: "40mm",
+    variants: [
+        { "name": "40×311R (Bofors L/60)" },
+        { "name": "40×364R (Bofors L/70)" }
+    ]
+    },
+    {
+        range: "Shotgun",
+        variants: [
+            {
+                "name": "2 bore: 3+1⁄2 in (89mm)",
+                "displayName": "2/89"
+            },
+            {
+                "name": "4 bore: 3+1⁄4 in (83mm)",
+                "displayName": "4/83"
+            },
+            {
+                "name": "4 bore: 4 in (102mm)",
+                "displayName": "4/102"
+            },
+            {"name": "6 bore"},
+            {
+                "name": "8 bore: 3 in (76mm)",
+                "displayName": "8/76"
+            },
+            {
+                "name": "8 bore: 3+1⁄4 in (83mm)",
+                "displayName": "8/83"
+            },
+            {
+                "name": "8 bore: 3+3⁄4 in (95mm)",
+                "displayName": "8/95"
+            },
+            {
+                "name": "8 bore: 4 in (102mm)",
+                "displayName": "8/102"
+            },
+            {
+                "name": "10 bore: 2+9⁄16 in (65mm)",
+                "displayName": "10/65"
+            },
+            {
+                "name": "10 bore: 2+5⁄8 in (67mm)",
+                "displayName": "10/67"
+            },
+            {
+                "name": "10 bore: 2+7⁄8 in (73mm)",
+                "displayName": "10/73"
+            },
+            {
+                "name": "10 bore: 3 in (76mm)",
+                "displayName": "10/76"
+            },
+            {
+                "name": "10 bore: 3+1⁄4 in (83mm)",
+                "displayName": "10/83"
+            },
+            {
+                "name": "10 bore: 3+1⁄2 in (89mm)",
+                "displayName": "10/89"
+            },
+            {
+                "name": "12 bore: 1+3⁄4 in (44mm)",
+                "displayName": "12/44"
+            },
+            {
+                "name": "12 bore: 2 in (51mm)",
+                "displayName": "12/51"
+            },
+            {
+                "name": "12 bore: 2+1⁄4 in (57mm)",
+                "displayName": "12/57"
+            },
+            {
+                "name": "12 bore: 2+1⁄2 in (64mm)",
+                "displayName": "12/64"
+            },
+            {
+                "name": "12 bore: 2+21/32 in (67.5mm)",
+                "displayName": "12/67.5"
+            },
+            {
+                "name": "12 bore: 2+3⁄4 in (70mm)",
+                "displayName": "12/70"
+            },
+            {
+                "name": "12 bore: 3 in (76mm)",
+                "displayName": "12/76"
+            },
+            {
+                "name": "12 bore: 3+1⁄2 in (89mm)",
+                "displayName": "12/89"
+            },
+            {
+                "name": "14 bore: 2+1⁄2 in (64mm)",
+                "displayName": "14/64"
+            },
+            {
+                "name": "16 bore: 2+1⁄2 in (64mm)",
+                "displayName": "16/64"
+            },
+            {
+                "name": "16 bore: 2+9⁄16 in (65mm)",
+                "displayName": "16/65"
+            },
+            {
+                "name": "16 bore: 2+5⁄8 in (67mm)",
+                "displayName": "16/67"
+            },
+            {
+                "name": "16 bore: 2+3⁄4 in (70mm)",
+                "displayName": "16/70"
+            },
+            {
+                "name": "16 bore: 3 in (76mm)",
+                "displayName": "16/76"
+            },
+            {
+                "name": "20 bore: 2+1⁄2 in (64mm)",
+                "displayName": "20/64"
+            },
+            {
+                "name": "20 bore: 2+3⁄4 in (70mm)",
+                "displayName": "20/70"
+            },
+            {
+                "name": "20 bore: 3 in (76mm)",
+                "displayName": "20/76"
+            },
+            {
+                "name": "20 bore: 3+1⁄2 in (89mm)",
+                "displayName": "20/89"
+            },
+            {
+                "name": "24 bore: 2+1⁄2 in (64mm)",
+                "displayName": "24/64"
+            },
+            {
+                "name": "28 bore: 2+1⁄2 in (64mm)",
+                "displayName": "28/64"
+            },
+            {
+                "name": "28 bore: 2+3⁄4 in (70mm)",
+                "displayName": "28/70"
+            },
+            {
+                "name": "28 bore: 3 in (76mm)",
+                "displayName": "28/76"
+            },
+            {
+                "name": "32 bore: 2+1⁄2 in (64mm)",
+                "displayName": "32/64"
+            },
+            {"name": ".410 bore: 2 in (51mm)"},
+            {"name": ".410 bore: 2+1⁄2 in (64mm)"},
+            {"name": ".410 bore: 3 in (76mm)"},
+            {"name": ".360 bore: 1+3⁄4 in (44mm)"},
+            {"name": "9 mm (No. 3 bore) short rimfire"},
+            {"name": "9 mm (No. 3 bore) long rimfire"},
+            {"name": "7 mm (No. 2 bore) rimfire"},
+            {"name": "6 mm (No. 1 bore) short rimfire"},
+            {"name": "6 mm (No. 1 bore) long rimfire"}
+          ],         
+    },
+    {
+        range: "Flobert",
+        variants: [
+            {"name":"4mm Flobert"},
+            {"name":"6mm Flobert"},
+            {"name":"7mm Flobert"},
+            {"name":"9mm Flobert"},
+            {"name":"6mm Flobert Schrot"},
+            {"name":"6mm Flobert Schrot lang"},
+            {"name":"6mm Flobert Doppelschrot"},
+            {"name":"7mm Flobert Schrot"},
+            {"name":"7mm Flobert Schrot lang"},
+            {"name":"9mm Flobert Schrot"},
+            {"name":"9mm Flobert Schrot lang"},
+            {"name":"9mm Flobert Schrot kurz"},
+        ]
+    },
+    {
+        range: "Luft/Air/Aria/Vent",
+        variants: [
+            {"name":".177 / 4.5mm"},
+            {"name":".22 / 5.5mm"},
+            {"name":".25 / 6.25mm"},
+            {"name":".30 / 7.62mm"},
+            {"name":".357 / 9.02mm"},
+            {"name":"6mm BB"},
+            {"name":"8mm BB"},
+        ]
+    },
+    {
+  range: "22mm Grenade",
+  variants: [
+    { "name": "22×90mm NATO rifle grenade" },
+    { "name": "22mm spigot (blank-launched rifle grenade)" }
+  ]
+},
+{
+  range: "30mm Grenade",
+  variants: [
+    { "name": "30×29mm (VOG-17 / AGS-17)" },
+    { "name": "30×30mm (AGS-30)" }
+  ]
+},
+{
+  range: "37mm Grenade",
+  variants: [
+    { "name": "37×113mmSR (low-velocity)" },
+    { "name": "37mm gas / signal cartridge" }
+  ]
+},
+{
+  range: "40mm Grenade (low velocity)",
+  variants: [
+    { "name": "40×46mm LV" }
+  ]
+},
+{
+  range: "40mm Grenade (medium velocity)",
+  variants: [
+    { "name": "40×51mm MV" }
+  ]
+},
+{
+  range: "40mm Grenade (high velocity)",
+  variants: [
+    { "name": "40×53mm HV" }
+  ]
+},
+{
+  range: "51mm Grenade",
+  variants: [
+    { "name": "51mm mortar-grenade (French AGL)" }
+  ]
+},
+{
+  range: "57mm RPG",
+  variants: [
+    { "name": "57mm PG-2 (RPG-2)" }
+  ]
+},
+{
+  range: "66mm RPG",
+  variants: [
+    { "name": "66mm M72 LAW" }
+  ]
+},
+{
+  range: "70mm RPG",
+  variants: [
+    { "name": "70mm PG-7V (early RPG-7)" }
+  ]
+},
+{
+  range: "72–73mm RPG",
+  variants: [
+    { "name": "72.5mm RPG-26 Aglen" }
+  ]
+},
+{
+  range: "80–85mm RPG",
+  variants: [
+    { "name": "84mm Carl Gustaf (M2 / M3 / M4)" },
+    { "name": "85mm PG-7VL (RPG-7)" }
+  ]
+},
+{
+  range: "90mm RPG",
+  variants: [
+    { "name": "90mm M67 recoilless / rocket family" }
+  ]
+},
+{
+  range: "93mm RPG",
+  variants: [
+    { "name": "93mm PG-7VR tandem (RPG-7)" }
+  ]
+},
+{
+  range: "100–106mm RPG",
+  variants: [
+    { "name": "105mm RPG-27 Tavolga" },
+    { "name": "105mm RPG-29 Vampir" },
+    { "name": "106mm Panzerfaust 3" }
+  ]
+},
+    {
+        range: "Etc",
+        variants: [
+            {"name": "Granaten"},
+            {"name": "Flechettes"},
+            {"name": "Plasma"},
+            {"name": "Tennisbälle"},
+            {"name": "Dihydrogenmonoxyd"},
+            {"name": "Flammen"},
+            {"name": "Gummiplömpel"},
+            {"name": "Luft & Liebe"}
+        ]
+    }
+]
