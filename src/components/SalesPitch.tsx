@@ -1,6 +1,7 @@
 import React from "react"
 import { salesPitch } from "../text/text_salesPitch"
 import type { Language } from "../types/types_global"
+import { metadata_title } from "../text/text_metadata"
 
 interface Props{
     language: Language
@@ -9,6 +10,7 @@ interface Props{
 export default function SalesPitch({language}:Props){
     return (
         <section className="content" id="home">
+            <h1>{metadata_title[language]}</h1>
             <p dangerouslySetInnerHTML={{__html : salesPitch[language].tagline}}></p>
             {salesPitch[language].topics.map((topic, index) => {
                 return (
