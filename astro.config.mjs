@@ -12,6 +12,7 @@ export default defineConfig({
       prefixDefaultLocale: true
     }
   },
+  site: 'https://arsenal-app.ch',
   integrations: [
     react(),
     sitemap({
