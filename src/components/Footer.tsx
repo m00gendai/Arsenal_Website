@@ -17,7 +17,7 @@ export default function Footer({language}:Props){
                 name: "Privacy Policy"
             },
             fr: {
-                link: "nlpd",
+                link: "nldp",
                 name: "Déclaration de confidentialité"
             },
         },
