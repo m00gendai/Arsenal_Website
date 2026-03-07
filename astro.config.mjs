@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   i18n: {
   locales: ["de", "en", "fr", "it"],
-  defaultLocale: "de",
+  defaultLocale: "en",
   routing: {
       prefixDefaultLocale: true
   }
