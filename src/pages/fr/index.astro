@@ -1,25 +1,20 @@
 ---
 import Appstores from '../../components/Appstores';
 import Details from '../../components/Details/details';
+import Faq from '../../components/FAQ/faq';
 import FeatureImage from '../../components/FeatureImage';
 import Gallery from '../../components/Gallery';
-import Navbar from '../../components/Navbar';
 import SalesPitch from '../../components/SalesPitch';
 import Layout_Body from '../../layouts/Layout_Body.astro';
+import { metadata_featureImageAlt } from '../../text/text_metadata';
 import type { Language } from '../../types/types_global';
 
-const language:Language = "fr"
+const language = Astro.currentLocale as Language
 ---
 
-<Layout_Body 
-	language={language}
-	description={"Gérez votre collection d’armes à feu, vos munitions, vos accessoires, vos pièces d’armes et votre littérature sur les armes à feu avec cette application pratique!"}
-	title={"Arsenal - L’application suisse pour les collectionneurs d’armes"}
-	featureImageAlt={"Image principale de quelques captures d’écran de l’application en action"}
-	appstoreLang={"fr"}
-	appName={"Arsenal Collection d'Armes"}
->
-	<FeatureImage src={language} alt={"Image principale de quelques captures d’écran de l’application en action"} />
+<Layout_Body language={language}>
+	
+	<FeatureImage src={language} alt={metadata_featureImageAlt[language]} />
 
 	<Appstores language={language} />
 
@@ -28,5 +23,7 @@ const language:Language = "fr"
 	<Gallery />
 
 	<Details language={language} />
+
+	<Faq language={language} />
 
 </Layout_Body>
