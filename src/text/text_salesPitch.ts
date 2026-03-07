@@ -11,8 +11,8 @@ interface SalesPitch_Content{
 
 export interface SalesPitch{
     de: SalesPitch_Content
-    en: SalesPitch_Content | null
-    fr: SalesPitch_Content | null
+    en: SalesPitch_Content
+    fr: SalesPitch_Content
 }
 
 export const salesPitch: SalesPitch = {
