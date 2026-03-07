@@ -2,17 +2,10 @@
 import Layout_Body from '../../layouts/Layout_Body.astro';
 import type { Language } from '../../types/types_global';
 
-const language:Language = "de"
+const language = Astro.currentLocale as Language
 ---
 
-<Layout_Body 
-	language={language}
-	description={"Verwalten Sie Ihre Waffensammlung, den Munitionsbestand, Ihr Zubehör, Waffenbestandteile und Fachliteratur mit dieser bequemen App!"}
-	title={"Arsenal - Die Schweizer App für Waffensammler"}
-	featureImageAlt={"Vorstellungsbild von einigen Screenshots der App in Aktion"}
-	appstoreLang={"ch"}
-	appName={"Arsenal Waffen & Sammlung"}
->
+<Layout_Body language={language}>
 <section class="content">
                 <div class="jmdsnippet" data-jmd-snippet-version="3" style="position: relative;min-height: 80vh;">
 <div id="jmdwrapper-1772437135075" data-jmdwrapper="1772437135075">
