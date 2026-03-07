@@ -1,4 +1,4 @@
-import { title } from "../../text/details"
+import { title } from "../../text/text_details"
 import type { Language } from "../../types/types_global"
 import Details_supportedCalibers from "./details_supportedCalibers"
 
