@@ -1,5 +1,5 @@
 import React from "react"
-import { salesPitch } from "../text/salesPitch"
+import { salesPitch } from "../text/text_salesPitch"
 import type { Language } from "../types/types_global"
 
 interface Props{
