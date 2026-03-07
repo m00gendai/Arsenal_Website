@@ -1,5 +1,5 @@
 import { calibers } from "../../lib/caliberData";
-import { sections } from "../../text/details";
+import { sections } from "../../text/text_details";
 import type { Language } from "../../types/types_global";
 
 interface Props{
