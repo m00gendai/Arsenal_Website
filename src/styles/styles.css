@@ -116,17 +116,17 @@ h1{
 
 #flag_de,
 #flag_mobile_de{
-    background-image: url("../src/assets/de.png");
+    background-image: url("/assets/de.png");
 }
 
 #flag_en,
 #flag_mobile_en{
-    background-image: url("../src/assets/en.png");
+    background-image: url("/assets/en.png");
 }
 
 #flag_fr,
 #flag_mobile_fr{
-    background-image: url("../src/assets/fr.png");
+    background-image: url("/assets/fr.png");
 }
 
 .nav_mobile{
