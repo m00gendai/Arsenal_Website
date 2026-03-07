@@ -14,7 +14,7 @@ const language = Astro.currentLocale as Language
 
 <Layout_Body language={language}>
 
-	<FeatureImage src={language} alt={metadata_featureImageAlt[language]} />
+	<FeatureImage language={language} />
 
 	<Appstores language={language} />
 
