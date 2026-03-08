@@ -3,16 +3,18 @@ import type { Language } from "../types/types_global"
 
 interface Props{
     language: Language
+    currentLocation: string
 }
 
-export default function Navbar({language}:Props){
+export default function Navbar({language, currentLocation}:Props){
 
     const [visible, setVisible] = useState<boolean>(false)
 
     function hamburgerMenu(){
-        console.log(visible)
         setVisible(visible => !visible)
     }
+
+    const target = currentLocation.split("/").length === 3 ? currentLocation.split("/").slice(-1)[0] : ""
 
     return (
         <>
@@ -20,24 +22,24 @@ export default function Navbar({language}:Props){
                 <div className="nav_desktop_container">
                     <ul className="anchors">
                         <li>
-                            <a href={`/${language}/#home`}>Home</a>
+                            <a href={`/${language}`}>Home</a>
                         </li>
                         <li>
-                            <a href={`/${language}/#details`}>Details</a>
+                            <a href={`/${language}/details`}>Details</a>
                         </li>
                         <li>
-                            <a href={`/${language}/#faq`}>FAQ</a>
+                            <a href={`/${language}/faq`}>FAQ</a>
                         </li>
                     </ul>
                     <ul className="flags">
                         <li>
-                            <a href="/de/" className="flag" id="flag_de" aria-label="Deutsch"></a>
+                            <a href={`/de/${target}`} className="flag" id="flag_de" aria-label="Deutsch"></a>
                         </li>
                         <li>
-                            <a href="/en/" className="flag" id="flag_en" aria-label="English"></a>
+                            <a href={`/en/${target}`} className="flag" id="flag_en" aria-label="English"></a>
                         </li>
                         <li>
-                            <a href="/fr/" className="flag" id="flag_fr" aria-label="Francais"></a>
+                            <a href={`/fr/${target}`} className="flag" id="flag_fr" aria-label="Francais"></a>
                         </li>
                     </ul>
                 </div>
@@ -53,24 +55,24 @@ export default function Navbar({language}:Props){
                 {visible ? <div id="mobileContainer">
                     <ul className="flags_mobile">
                         <li>
-                            <a href="/de/" className="flag_mobile" id="flag_mobile_de" aria-label="Deutsch"></a>
+                            <a href={`/de/${target}`} className="flag" id="flag_de" aria-label="Deutsch"></a>
                         </li>
                         <li>
-                            <a href="/en/" className="flag_mobile" id="flag_mobile_en" aria-label="English"></a>
+                            <a href={`/en/${target}`} className="flag" id="flag_en" aria-label="English"></a>
                         </li>
                         <li>
-                            <a href="/fr/" className="flag_mobile" id="flag_mobile_fr" aria-label="Francais"></a>
+                            <a href={`/fr/${target}`} className="flag" id="flag_fr" aria-label="Francais"></a>
                         </li>
                     </ul>
                     <ul className="anchors_mobile">
                         <li>
-                            <a href={`/${language}/#home`}>Home</a>
+                            <a href={`/${language}`}>Home</a>
                         </li>
                         <li>
-                            <a href={`/${language}/#details`}>Details</a>
+                            <a href={`/${language}/details`}>Details</a>
                         </li>
                         <li>
-                            <a href={`/${language}/#faq`}>FAQ</a>
+                            <a href={`/${language}/faq`}>FAQ</a>
                         </li>
                     </ul>
                 </div> : null}
