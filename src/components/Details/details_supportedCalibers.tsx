@@ -1,5 +1,5 @@
 import { calibers } from "../../lib/caliberData";
-import { sections } from "../../text/text_details";
+import { section_supportedCalibers } from "../../text/text_details";
 import type { Language } from "../../types/types_global";
 
 interface Props{
@@ -9,12 +9,12 @@ interface Props{
 export default function Details_supportedCalibers({language}:Props){
     return(
         <>
-            <h3>{sections.title[language]}</h3>
-            {sections.text[language].map((text, index) => {
+            <h2>{section_supportedCalibers.title[language]}</h2>
+            {section_supportedCalibers.text[language].map((text, index) => {
                 return <p key={`text_index${index}`} dangerouslySetInnerHTML={{__html: text}}></p>
             })}
 
-            <div id="caliber_container">
+            <div className="accordionContainer">
                 {calibers.map((range, index) => {
                     return(
                         <details key={`range_${index}`}>
