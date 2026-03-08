@@ -1,15 +1,5 @@
+import { getCaliberCount } from "../lib/caliberData"
 import type { SimpleTranslation, SimpleTranslation_StringArray } from "../types/types_global"
-
-interface Section_text{
-    de: string[]
-    en: string[]
-    fr: string[]
-}
-
-interface Section{
-    title: SimpleTranslation
-    text: Section_text
-}
 
 export interface FAQ{
     question: SimpleTranslation
@@ -140,6 +130,67 @@ export const faq: FAQ[] = [
                         `est en développement constant`,
                     ],
                     `En fin de compte, chacun décide pour lui-même quelle application, s’il y en a une, est la plus adaptée. Parfois, ce tableau Excel suffit.`
+                ],
+        }
+    },
+    {
+        question: {
+            de: `Warum kann ich keine eigenen Kaliber definieren?`,
+            en: `Why can't I define custom calibers?`,
+            fr: `Où sont sauvegardées les données et qui y a accès?`,
+        },
+        answer: {
+            de: [
+                    `Arsenal unterstützt ${getCaliberCount()} Kaliber. Wenn eigene Kaliber definiert werden, können diese in Konflikt mit bestehenden oder zukünftigen
+                    Einträgen geraten. Ebenfalls ist die QuickShot-Funktion davon abhängig, dass die Kaliber exakt übereinstimmen. Gewisse Anzeige- und Druckoptionen
+                    wollen das Kaliber auch in einem bestimmten Format haben. Um das ganze daher so reibungslos wie möglich zu machen, wurde der Weg der fixen 
+                    Kaliberangaben gewählt.`,
+                    `Wenn ein Kaliber fehlt, kann dieses per Nachricht an den Entwickler selbstverständlich gewünscht werden, es wird dann beim nächsten Update
+                    hinzugefügt.`,
+                    `Man kann diese Restriktion umgehen, in dem man ein CSV importiert, wo die Kaliberangaben keiner Validierung unterstehen.
+                    Das ist aber nicht ratsam und kann zu unvorhergesehenen Konsequenzen führen. Bevor sowas versucht wird, unbedingt Datenbank sichern! `
+                ],
+            en: [
+                    `Arsenal supports ${getCaliberCount()} calibers. If you define your own calibers, they may conflict with existing or future
+                    entries. Also, the QuickShot feature depends on the exact match of the calibers. Some display and print options
+                    require the caliber to be in a specific format. To make the whole thing as smooth as possible, the way of fixed caliber 
+                    entries was chosen.`,
+                    `If a caliber is missing, you can request it by sending a message to the developer. It will then be added in the next update.`,
+                    `You can bypass this restriction by importing a CSV where the caliber entries are not validated.
+                    However, this is not recommended and can lead to unforeseen consequences. Backup the database before trying this! `
+                ],
+            fr: [
+                    `Arsenal supporte ${getCaliberCount()} calibres. Si vous définissez vos propres calibres, ils peuvent entrer en conflit avec des entrées existantes 
+                    ou futures ou avec la fonction QuickShot qui dépend d’une correspondance exacte des calibres. Certaines options d’affichage et d’impression
+                    exigent également que le calibre soit dans un format spécifique. Pour que tout fonctionne de la meilleure façon possible, nous avons choisi de fixer 
+                    les calibres.`,
+                    `Si un calibre est manquant, vous pouvez le demander par message au développeur, il sera ajouté lors de la prochaine mise à jour.`,
+                    `Vous pouvez contourner cette restriction en important un fichier CSV dont les informations de calibre ne sont pas validées.
+                    Cependant, ce n’est pas recommandé et peut avoir des conséquences imprévues. Avant d’essayer cela, sauvegardez votre base de données! `
+                ],
+        },
+    },
+    {
+        question: {
+            de: `Warum gibt es keine gratis Demoversion?`,
+            en: `Why is there no free demo?`,
+            fr: `Pourquoi il n’y a pas de version d’essai gratuite ?`,
+        },
+        answer: {
+            de: [
+                    `Das hat mit den Appstores zu tun, insbesondere Android Playstore, welcher eine gewisse Anzahl Tester für eine gewisse Zeit vorschreibt, um
+                    die App überhaupt einreichen zu dürfen. Mittlerweile ist eine Demoversion aber wieder mehr in den Fokus gerückt.`,
+                    `Eine "Freemium"-Variante wurde von vornherein explizit ausgeschlossen.`
+                ],
+            en: [
+                    `This has to do with the app stores, in particular the Android Playstore, which requires a certain number of testers for a certain period of time in order
+                    to be able to submit the app at all. Meanwhile however, a demo version has again become more of a focus.`,
+                    `A “freemium” variant was explicitly ruled out from the outset.`
+                ],
+            fr: [
+                    `Cela a un rapport avec les Appstores, en particulier le Playstore Android, qui impose un certain nombre de testeurs pour une certaine durée afin
+                    de pouvoir soumettre l’application. Mais une version de démonstration a été mise en avant à nouveau.`,
+                    `Une version « freemium » a été explicitement exclue dès le départ.`
                 ],
         }
     },

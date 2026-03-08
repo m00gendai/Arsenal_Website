@@ -7,7 +7,7 @@ interface Props{
 
 export default function Faq_accordions({language}:Props){
     return(
-        <div id="faq_container">
+        <div className="accordionContainer">
             {faq.map((entry, index) => {
                 return(
                     <details key={`entry_${index}`}>
@@ -18,7 +18,7 @@ export default function Faq_accordions({language}:Props){
                             {entry.answer[language].map((answer, indx) => {
                                 if(Array.isArray(answer)){
                                     return(
-                                        <ul>
+                                        <ul key={`faq_ul_${indx}`}>
                                             {answer.map((listItem, idx) => {
                                                 return <li key={`faq_listItem_${idx}`} dangerouslySetInnerHTML={{__html: listItem}}></li>
                                             })}
