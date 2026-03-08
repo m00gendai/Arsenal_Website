@@ -26,8 +26,6 @@ const ogLocale = locales[language] ?? "de_DE"
 const ogAlternates = Object.values(locales).filter(locale => locale !== ogLocale)
 
 const baseURL = `https://arsenal-app.ch/`
-
-const currentURL = Astro.url
 ---
 
 <Layout_Base language={language}>
@@ -84,7 +82,7 @@ const currentURL = Astro.url
             })} />
 	</head>
 	<body>
-        <Navbar language={language} currentLocation={currentURL.pathname} client:load/>
+        <Navbar language={language} client:load/>
         <main>
 		    <slot />
         </main>

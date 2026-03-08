@@ -1,20 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import type { Language } from "../types/types_global"
 
 interface Props{
     language: Language
-    currentLocation: string
 }
 
-export default function Navbar({language, currentLocation}:Props){
+export default function Navbar({language}:Props){
 
     const [visible, setVisible] = useState<boolean>(false)
 
     function hamburgerMenu(){
         setVisible(visible => !visible)
     }
+    const [target, setTarget] = useState<string>("")
 
-    const target = currentLocation.split("/").length === 3 ? currentLocation.split("/").slice(-1)[0] : ""
+    useEffect(() => {
+        const path = window.location.pathname
+        setTarget(path.replace(/^\/(de|en|fr)\/?/, ""))
+    }, [])
 
     return (
         <>
