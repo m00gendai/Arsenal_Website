@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import type { Language } from "../types/types_global"
+import s from "../styles/navbar.module.css"
 
 interface Props{
     language: Language
@@ -21,9 +22,9 @@ export default function Navbar({language}:Props){
 
     return (
         <>
-            <nav className="nav_desktop">
-                <div className="nav_desktop_container">
-                    <ul className="anchors">
+            <nav className={`${s.nav_desktop} desktop`}>
+                <div className={s.nav_desktop_container}>
+                    <ul className={s.anchors}>
                         <li>
                             <a href={`/${language}`}>Home</a>
                         </li>
@@ -34,40 +35,40 @@ export default function Navbar({language}:Props){
                             <a href={`/${language}/faq`}>FAQ</a>
                         </li>
                     </ul>
-                    <ul className="flags">
+                    <ul className={s.flags}>
                         <li>
-                            <a href={`/de/${target}`} className="flag" id="flag_de" aria-label="Deutsch"></a>
+                            <a href={`/de/${target}`} className={s.flag} id={s.flag_de} aria-label="Deutsch"></a>
                         </li>
                         <li>
-                            <a href={`/en/${target}`} className="flag" id="flag_en" aria-label="English"></a>
+                            <a href={`/en/${target}`} className={s.flag} id={s.flag_en} aria-label="English"></a>
                         </li>
                         <li>
-                            <a href={`/fr/${target}`} className="flag" id="flag_fr" aria-label="Francais"></a>
+                            <a href={`/fr/${target}`} className={s.flag} id={s.flag_fr} aria-label="Francais"></a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <nav className="nav_mobile">
-                <div id="tagline">
+            <nav className={`${s.nav_mobile} mobile`}>
+                <div id={s.tagline}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>hospital</title><path d="M18 14H14V18H10V14H6V10H10V6H14V10H18" /></svg>
                     Arsenal App
                 </div>
-                <div id="hamburger" onClick={()=>hamburgerMenu()}>
+                <div id={s.hamburger} onClick={()=>hamburgerMenu()}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
                 </div>
-                {visible ? <div id="mobileContainer">
-                    <ul className="flags_mobile">
+                {visible ? <div id={s.mobileContainer}>
+                    <ul className={s.flags_mobile}>
                         <li>
-                            <a href={`/de/${target}`} className="flag" id="flag_de" aria-label="Deutsch"></a>
+                            <a href={`/de/${target}`} className={s.flag} id={s.flag_de} aria-label="Deutsch"></a>
                         </li>
                         <li>
-                            <a href={`/en/${target}`} className="flag" id="flag_en" aria-label="English"></a>
+                            <a href={`/en/${target}`} className={s.flag} id={s.flag_en} aria-label="English"></a>
                         </li>
                         <li>
-                            <a href={`/fr/${target}`} className="flag" id="flag_fr" aria-label="Francais"></a>
+                            <a href={`/fr/${target}`} className={s.flag} id={s.flag_fr} aria-label="Francais"></a>
                         </li>
                     </ul>
-                    <ul className="anchors_mobile">
+                    <ul className={s.anchors_mobile}>
                         <li>
                             <a href={`/${language}`}>Home</a>
                         </li>
