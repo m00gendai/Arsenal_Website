@@ -11,9 +11,11 @@ import "../styles/styles.css"
 
 interface Props{
 	language: Language
+    userRatingCount: number
+    averageUserRating: number
 }
 
-const { language } = Astro.props;
+const { language, userRatingCount, averageUserRating } = Astro.props;
 
 const locales = { 
 	de: "de_DE", 
@@ -78,6 +80,13 @@ const baseURL = `https://arsenal-app.ch/`
                     "https://play.google.com/store/apps/details?id=com.m00gendai.arsenal",
                     `https://apps.apple.com/app/arsenal-armamentarium/id6670214648`
                 ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": averageUserRating,
+                    "ratingCount": userRatingCount,
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
                 "image": `${baseURL}assets/appIcon.png`
             })} />
 	</head>

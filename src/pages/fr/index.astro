@@ -7,13 +7,20 @@ import Layout_Body from '../../layouts/Layout_Body.astro';
 import type { Language } from '../../types/types_global';
 
 const language = Astro.currentLocale as Language
+
+const fetchAppstoreData = await fetch(
+    "https://itunes.apple.com/lookup?id=6670214648&country=ch"
+)
+const appstoreData = await fetchAppstoreData.json();
+
+const { userRatingCount, averageUserRating } = appstoreData.results[0]
 ---
 
-<Layout_Body language={language}>
+<Layout_Body language={language} userRatingCount={userRatingCount} averageUserRating={averageUserRating}>
 	
 	<FeatureImage language={language} />
 
-	<Appstores language={language} />
+	<Appstores language={language} userRatingCount={userRatingCount} averageUserRating={averageUserRating} />
 
 	<SalesPitch language={language} />
 
