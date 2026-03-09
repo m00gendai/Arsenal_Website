@@ -10,11 +10,23 @@ import { starsText } from "../text/text_appstores"
 
 interface Props{
 	language: Language
-    userRatingCount: number
-    averageUserRating: number
 }
 
-export default function Appstores({language, userRatingCount, averageUserRating}:Props){
+export default async function Appstores({language}:Props){
+
+    async function getAppstoreData(){
+        const fetchAppstoreData = await fetch(
+            "https://itunes.apple.com/lookup?id=6670214648&country=ch"
+        )
+        
+        const appstoreData = await fetchAppstoreData.json();
+
+        return appstoreData.results[0]
+
+
+    }
+
+    const { userRatingCount, averageUserRating } = await getAppstoreData()
 
     const percentRating = averageUserRating*20
     const ratingText = `${starsText[language].replace("{{{A}}}", averageUserRating.toString()).replace("{{{B}}}", userRatingCount.toString())}`
