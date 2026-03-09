@@ -3,6 +3,7 @@ import FeatureImage_en from "../assets/feature_en.png"
 import FeatureImage_fr from "../assets/feature_fr.png"
 import { metadata_featureImageAlt } from "../text/text_metadata"
 import type { Language } from "../types/types_global"
+import s from "../styles/featureImage.module.css"
 
 interface Props{
     language: Language
@@ -24,8 +25,12 @@ export default function FeatureImage({language}:Props){
     }
 
     return (
-        <section className="content featureImage">
-            <img src={getFeatureImage(language)} width="100%" alt={metadata_featureImageAlt[language]} />
+        <section className={`content fullWidth noPadding ${s.section}`} style={{
+            objectFit: "contain"
+        }}>
+            <div className={s.wrapper}>
+                <img src={getFeatureImage(language)} alt={metadata_featureImageAlt[language]} className={s.image}/>
+            </div>
         </section>
     )
 }
