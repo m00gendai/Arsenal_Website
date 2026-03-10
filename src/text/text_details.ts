@@ -1,11 +1,16 @@
 import { getCaliberCount } from "../lib/caliberData";
 import { ammoCollection, barrelCollection, bookCollection, conversionCollection, gunCollection, lightLaserCollection, magazineCollection, miscAccessoryCollection, opticCollection, scopeCollection, silencerCollection } from "../lib/itemData";
 import { dataTemplate_Translations, excludedKeysForDataTemplates, tabBarLabels } from "../lib/itemData_translations";
-import type { Language, SimpleTranslation, SimpleTranslation_StringArray } from "../types/types_global";
+import type { Language, SimpleTranslation, SimpleTranslation_StringArray, SimpleTranslation_StringArrayName } from "../types/types_global";
 
 interface Section{
     title: SimpleTranslation
     text: SimpleTranslation_StringArray
+}
+
+interface collectionSection{
+    title: SimpleTranslation
+    text: SimpleTranslation_StringArrayName
 }
 
 export const title: SimpleTranslation ={
@@ -30,8 +35,10 @@ function buildSectionMain(lang: Language) {
     return [
         getTranslatedTitle("gunCollection", lang),
         getTranslatedData(gunCollection, lang),
+        {name: "gunCollection"},
         getTranslatedTitle("ammoCollection", lang),
         getTranslatedData(ammoCollection, lang),
+        {name: "ammoCollection"},
     ]
 }
 
@@ -90,7 +97,7 @@ export const section_collectionItems_title: Section = {
     }
 }
 
-export const section_collectionItems_main: Section = {
+export const section_collectionItems_main: collectionSection = {
     title: {
         de: `Hauptsammlungen`,
         en: `Main Collections`,
