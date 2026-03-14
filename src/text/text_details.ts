@@ -46,16 +46,22 @@ function buildSectionAccessories(lang: Language) {
     return [
         getTranslatedTitle("silencerCollection", lang),
         getTranslatedData(silencerCollection, lang),
+        {name: "silencerCollection"},
         getTranslatedTitle("opticCollection", lang),
         getTranslatedData(opticCollection, lang),
+        {name: "opticCollection"},
         getTranslatedTitle("scopeCollection", lang),
         getTranslatedData(scopeCollection, lang),
+        {name: "scopeCollection"},
         getTranslatedTitle("lightLaserCollection", lang),
         getTranslatedData(lightLaserCollection, lang),
+        {name: "lightLaserCollection"},
         getTranslatedTitle("magazineCollection", lang),
         getTranslatedData(magazineCollection, lang),
+        {name: "magazineCollection"},
         getTranslatedTitle("miscAccessoryCollection", lang),
         getTranslatedData(miscAccessoryCollection, lang),
+        {name: "miscAccessoryCollection"},
     ]
 }
 
@@ -63,8 +69,10 @@ function buildSectionParts(lang: Language) {
     return [
         getTranslatedTitle("conversionCollection", lang),
         getTranslatedData(conversionCollection, lang),
+        {name: "conversionCollection"},
         getTranslatedTitle("barrelCollection", lang),
         getTranslatedData(barrelCollection, lang),
+        {name: "barrelCollection"},
     ]
 }
 
@@ -72,6 +80,7 @@ function buildSectionLiterature(lang: Language) {
     return [
         getTranslatedTitle("bookCollection", lang),
         getTranslatedData(bookCollection, lang),
+        {name: "bookCollection"},
     ]
 }
 
@@ -110,7 +119,7 @@ export const section_collectionItems_main: collectionSection = {
     }
 }
 
-export const section_collectionItems_accessories: Section = {
+export const section_collectionItems_accessories: collectionSection = {
     title: {
         de: `Zubehör`,
         en: `Accessories`,
@@ -123,7 +132,7 @@ export const section_collectionItems_accessories: Section = {
     }
 }
 
-export const section_collectionItems_parts: Section = {
+export const section_collectionItems_parts: collectionSection = {
     title: {
         de: `Waffenteile`,
         en: `Gun Parts`,
@@ -136,7 +145,7 @@ export const section_collectionItems_parts: Section = {
     }
 }
 
-export const section_collectionItems_literature: Section = {
+export const section_collectionItems_literature: collectionSection = {
     title: {
         de: `Literatur`,
         en: `Literature`,
