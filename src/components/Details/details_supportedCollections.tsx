@@ -2,7 +2,8 @@ import React from "react";
 import { section_collectionItems_accessories, section_collectionItems_literature, section_collectionItems_main, section_collectionItems_parts, section_collectionItems_title } from "../../text/text_details";
 import type { Language } from "../../types/types_global";
 import gunCollectionImage from "../../assets/collections/gunCollection.jpg"
-import feature from "../../assets/feature_de.png"
+import ammoCollectionImage from "../../assets/collections/ammoCollection.jpg"
+import bookCollectionImage from "../../assets/collections/bookCollection.jpg"
 
 interface Props{
     language: Language
@@ -23,7 +24,25 @@ export default function Details_supportedCollections({language}:Props){
                 case "gunCollection":
                     return gunCollectionImage.src
                 case "ammoCollection":
-                    return feature.src
+                    return ammoCollectionImage.src
+                case "opticCollection":
+                    return ""
+                case "scopeCollection":
+                    return ""
+                case "magazineCollection":
+                    return ""
+                case "silencerCollection":
+                    return ""
+                case "lightLaserCollection":
+                    return ""
+                case "conversionCollection":
+                    return ""
+                case "barrelCollection":
+                    return ""
+                case "miscAccessoryCollection":
+                    return ""
+                case "bookCollection":
+                    return bookCollectionImage.src
                 default: 
                     return ""
             }
