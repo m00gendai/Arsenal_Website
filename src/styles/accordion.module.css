@@ -11,6 +11,7 @@
     width: 100%;
     background: var(--tertiary-container);
     box-shadow: 0px 5px 5px -2px var(--shadow);
+    color: var(--on-tertiary-container);
 }
 
 .summary{
@@ -20,11 +21,20 @@
 
 .content{
     position: relative;
-    background: var(--background);
+    background: var(--surface);
+    color: var(--on-background);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .list{
+    margin: 0 1rem;
+    padding: 0 2rem;
+}
+
+.text{
     margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 0 2rem;
 }
