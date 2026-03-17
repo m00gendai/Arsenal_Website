@@ -51,11 +51,6 @@
     font-weight: bold;
 }
 
-.android img{
-    border-radius: 15px;
-    border: 2px solid #a6a6a6;
-}
-
 @media only screen and (max-aspect-ratio: 13/9){
     .badge{
         width: 40%;
