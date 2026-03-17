@@ -2,8 +2,7 @@ import React from "react";
 import { section_collectionItems_accessories, section_collectionItems_literature, section_collectionItems_main, section_collectionItems_parts, section_collectionItems_title } from "../../text/text_details";
 import type { Language } from "../../types/types_global";
 import gunCollectionImage from "../../assets/collections/gunCollection.jpg"
-import ammoCollectionImage from "../../assets/collections/ammoCollection.jpg"
-import bookCollectionImage from "../../assets/collections/bookCollection.jpg"
+import s from "../../styles/supportedCollections.module.css"
 
 interface Props{
     language: Language
@@ -24,7 +23,7 @@ export default function Details_supportedCollections({language}:Props){
                 case "gunCollection":
                     return gunCollectionImage.src
                 case "ammoCollection":
-                    return ammoCollectionImage.src
+                    return ""
                 case "opticCollection":
                     return ""
                 case "scopeCollection":
@@ -42,7 +41,7 @@ export default function Details_supportedCollections({language}:Props){
                 case "miscAccessoryCollection":
                     return ""
                 case "bookCollection":
-                    return bookCollectionImage.src
+                    return ""
                 default: 
                     return ""
             }
@@ -62,30 +61,19 @@ export default function Details_supportedCollections({language}:Props){
                 return (
                     <React.Fragment key={`collection_${index}`}>
                         <h3>{collection.title[language]}</h3>
-                        <div className="accordionContainer">
+                        <div className={s.container}>
                             {Array.from(new Array(collectionTitles.length)).map((entry, indx) => {
-                                console.log(collectionTitles[indx])
                                 return (
-                                    <details className="collectionAccordion" key={`details_${indx}`}>
-                                        <summary style={{
-                                        backgroundImage: `url(${ getAccordionBackground(collectionName[indx])})`,
-                                        backgroundPosition: "center",
-                                        backgroundSize: "cover",
-                                        backgroundRepeat: "no-repeat",
-                                        backgroundAttachment: "scroll",
-                                        }}>
-                                            <span className="collectionAccordionScaffold">{`${collectionTitles[indx]}`}</span>
-                                            <span className="collectionAccordionTitle">{`${collectionTitles[indx]}`}</span>
-                                            <span className="collectionAccordionTitleBack">{`${collectionTitles[indx]}`}</span>
-                                        </summary>
-                                        <div className="accordionContent">
-                                            <ul>
+                                    <React.Fragment key={`details_${indx}`}>
+                                        <div className={s.inner} >
+                                            <h4>{`${collectionTitles[indx]}`}</h4>
+                                            <ul className={s.list}>
                                                 {collectionContent[indx] && collectionContent[indx].map((entry, ind) => {
                                                     return <li key={`accordion_listItem_${ind}`} dangerouslySetInnerHTML={{__html: entry}}></li>
                                                 })}
                                             </ul>
                                         </div>
-                                    </details>
+                                    </React.Fragment>
                                 )
                             })}
                         </div>
