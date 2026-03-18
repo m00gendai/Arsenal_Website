@@ -50,7 +50,6 @@ export default function Navbar({language}:Props){
             </nav>
             <nav className={`${s.nav_mobile} mobile`}>
                 <div id={s.tagline}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>hospital</title><path d="M18 14H14V18H10V14H6V10H10V6H14V10H18" /></svg>
                     Arsenal App
                 </div>
                 <div id={s.hamburger} onClick={()=>hamburgerMenu()}>
