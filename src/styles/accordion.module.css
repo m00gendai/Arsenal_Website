@@ -9,9 +9,9 @@
 .details{
     position: relative;
     width: 100%;
-    background: var(--tertiary-container);
+    background: var(--secondary-container);
     box-shadow: 0px 5px 5px -2px var(--shadow);
-    color: var(--on-tertiary-container);
+    color: var(--on-secondary-container);
 }
 
 .summary{
@@ -21,8 +21,8 @@
 
 .content{
     position: relative;
-    background: var(--surface);
-    color: var(--on-background);
+    background: var(--surface-variant);
+    color: var(--on-surface-variant);
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;

@@ -1,25 +1,28 @@
-.collection{
-    background: var(--highlight);
-    color: var(--on-highlight);
-    padding: 0.5rem;
-
-}
-
 .list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 2rem;
+    margin: 1rem 1rem 2rem 1rem;
 }
 
 .container{
     position: relative;
     width: 100%;
-    padding: 0 0 1rem 0;
+    display: grid;
+    row-gap: 2rem;
 }
 
 .inner{
     position: relative;
     width: 100%;
+    background: var(--surface-variant);
+    color: var(--on-surface-variant);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px -5px var(--shadow);
+}
+
+.inner:last-child{
+    margin-bottom: 2rem;
 }
 
 .title{
@@ -28,6 +31,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 1rem;
+    color: var(--primary);
 }
 
 .title_content{
@@ -46,4 +51,5 @@
     height: 2rem;
     aspect-ratio: 1/1;
     margin: 0 1rem 0 0;
+    fill: var(--primary);
 }
