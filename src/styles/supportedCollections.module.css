@@ -1,3 +1,10 @@
+.collection{
+    background: var(--highlight);
+    color: var(--on-highlight);
+    padding: 0.5rem;
+
+}
+
 .list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -7,12 +14,36 @@
 .container{
     position: relative;
     width: 100%;
-    margin: 0 0 3rem 0;
-    padding: 0 0 2rem 0;
-    border-bottom: 2px solid var(--primary);
+    padding: 0 0 1rem 0;
 }
 
 .inner{
     position: relative;
     width: 100%;
+}
+
+.title{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title_content{
+    display: flex;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title h4{
+    margin: 0;
+}
+
+.title svg{
+    height: 2rem;
+    aspect-ratio: 1/1;
+    margin: 0 1rem 0 0;
 }
