@@ -20,7 +20,7 @@
 }
 
 .star{
-    position: realtive;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@
 }
 
 .text{
-    position: realtive;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
