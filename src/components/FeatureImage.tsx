@@ -1,9 +1,10 @@
-import FeatureImage_de from "../assets/feature_de.png"
-import FeatureImage_en from "../assets/feature_en.png"
-import FeatureImage_fr from "../assets/feature_fr.png"
+import FeatureImage_de from "../assets/feature_de_mask.png"
+import FeatureImage_en from "../assets/feature_en_mask.png"
+import FeatureImage_fr from "../assets/feature_fr_mask.png"
 import { metadata_featureImageAlt } from "../text/text_metadata"
 import type { Language } from "../types/types_global"
 import s from "../styles/featureImage.module.css"
+import pattern from "../assets/pattern.jpg"
 
 interface Props{
     language: Language
@@ -26,7 +27,10 @@ export default function FeatureImage({language}:Props){
 
     return (
         <section className={`content fullWidth noPadding ${s.section}`} style={{
-            objectFit: "contain"
+            objectFit: "contain",
+            backgroundImage: `url("${pattern.src}")`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "contain",
         }}>
             <div className={s.wrapper}>
                 <img src={getFeatureImage(language)} alt={metadata_featureImageAlt[language]} className={s.image}/>
