@@ -24,6 +24,6 @@
 
 @media only screen and (max-aspect-ratio: 13/9){
     .section{
-         background-color: rebeccapurple;
+         background-color: var(--highlight);
     }
 }

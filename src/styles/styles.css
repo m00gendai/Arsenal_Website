@@ -31,6 +31,8 @@
     --surface-disabled:       rgba(32, 26, 25, 0.12);
     --on-surface-disabled:    rgba(32, 26, 25, 0.38);
     --backdrop:               rgba(59, 45, 43, 0.4);
+    --highlight:              rgba(102, 51, 153, 1);
+    --on-highlight:           rgba(255, 255, 255, 1);      
 }
 
 body{
@@ -82,7 +84,7 @@ code{
 }
 
 .highLight{
-    background: rebeccapurple;
+    background: var(--highlight);
     padding: 0;
 }
 
