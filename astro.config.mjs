@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   i18n: {
-    locales: ["de", "en", "fr"],
+    locales: ["de", "en", "fr", "it"],
     defaultLocale: "en",
     routing: {
       prefixDefaultLocale: true
@@ -24,6 +24,7 @@ export default defineConfig({
           en: 'en-US', // The `defaultLocale` value must present in `locales` keys
           de: 'de-DE',
           fr: 'fr-FR',
+          it: 'it-IT'
         },
       },
     }),
