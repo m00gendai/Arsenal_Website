@@ -36,30 +36,30 @@ export default async function Appstores({language}:Props){
     function getAndroidBadge(lang: Language){
         switch(lang){
             case "de":
-                return androidBadge_de.src
+                return androidBadge_de
             case "en":
-                return androidBadge_en.src
+                return androidBadge_en
             case "fr":
-                return androidBadge_fr.src
+                return androidBadge_fr
             case "it":
-                return androidBadge_it.src
+                return androidBadge_it
             default:
-                return androidBadge_en.src
+                return androidBadge_en
         }
     }
 
     function getIosBadge(lang: Language){
         switch(lang){
             case "de":
-                return iosBadge_de.src
+                return iosBadge_de
             case "en":
-                return iosBadge_en.src
+                return iosBadge_en
             case "fr":
-                return iosBadge_fr.src
+                return iosBadge_fr
             case "it":
-                return iosBadge_it.src
+                return iosBadge_it
             default:
-                return iosBadge_en.src
+                return iosBadge_en
         }
     }
 
@@ -67,7 +67,13 @@ export default async function Appstores({language}:Props){
         <section className="content fullWidth highLight">
             <div className={s.container}>
                 <a className={s.badge} href={`https://play.google.com/store/apps/details?id=com.m00gendai.arsenal&pli=1&hl=${language}`} target="_blank">
-                    <img src={getAndroidBadge(language)} width="100%" alt="Google Playstore Download Link" />
+                    <img 
+                        src={getAndroidBadge(language).src} 
+                        width={getAndroidBadge(language).width} 
+                        style={{ width: "100%", height: "auto" }}
+                        height={getAndroidBadge(language).height} 
+                        alt="Google Playstore Download Link" 
+                    />
                 </a>
                 <div className={`${s.rating} ${s.desktop}`} title={ratingText}>
                     <div className={s.star}>
@@ -82,7 +88,13 @@ export default async function Appstores({language}:Props){
                     </div>
                 </div>
                 <a className={s.badge} href={`https://apps.apple.com/app/arsenal-armamentarium/id6670214648`} target="_blank">
-                    <img src={getIosBadge(language)} width="100%" alt="AppleAppstore Download Link" />
+                    <img 
+                        src={getIosBadge(language).src} 
+                        width={getIosBadge(language).width} 
+                        height={getIosBadge(language).height}
+                        style={{ width: "100%", height: "auto" }}
+                        alt="AppleAppstore Download Link" 
+                    />
                 </a>
                 <div className={`${s.rating} ${s.mobile}`} title={ratingText}>
                     <div className={s.star}>
