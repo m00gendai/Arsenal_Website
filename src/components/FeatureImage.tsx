@@ -15,25 +15,24 @@ export default function FeatureImage({language}:Props){
     function getFeatureImage(lang: Language){
         switch(lang){
             case "de":
-                return FeatureImage_de.src
+                return FeatureImage_de
             case "en":
-                return FeatureImage_en.src
+                return FeatureImage_en
             case "fr":
-                return FeatureImage_fr.src
+                return FeatureImage_fr
             default: 
-                return FeatureImage_en.src
+                return FeatureImage_en
         }
     }
 
     return (
         <section className={`content fullWidth noPadding ${s.section}`} style={{
-            objectFit: "contain",
             backgroundImage: `url("${pattern.src}")`,
             backgroundRepeat: "repeat",
             backgroundSize: "contain",
         }}>
             <div className={s.wrapper}>
-                <img src={getFeatureImage(language)} alt={metadata_featureImageAlt[language]} className={s.image}/>
+                <img src={getFeatureImage(language).src} width={getFeatureImage(language).width} height={getFeatureImage(language).height} alt={metadata_featureImageAlt[language]} className={s.image}/>
             </div>
         </section>
     )
