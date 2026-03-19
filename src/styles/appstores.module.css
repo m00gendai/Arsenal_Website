@@ -69,11 +69,20 @@
     }
 }
 
+@media only screen and (max-aspect-ratio: 13/9){
+    .desktop{
+        display: none;
+    }
+}
+
 @media only screen and (min-aspect-ratio: 13/9){
-    .badge{
+        .badge{
         width: 20%;
     }
     .stars{
         font-size: 5rem;
+    }
+    .mobile{
+        display: none;
     }
 }

@@ -63,7 +63,7 @@ export default async function Appstores({language}:Props){
                 <a className={`${s.badge} ${s.android}`} href={`https://play.google.com/store/apps/details?id=com.m00gendai.arsenal&pli=1&hl=${language}`} target="_blank">
                     <img src={getAndroidBadge(language)} width="100%" alt="Google Playstore Download Link" />
                 </a>
-                <div className={`${s.rating} desktop`} title={ratingText}>
+                <div className={`${s.rating} ${s.dekstop}}`} title={ratingText}>
                     <div className={s.star}>
                         <span className={s.stars} style={{
                             background: `linear-gradient(90deg, #ffd700 0%, #ffed4e ${percentRating/2}%, #ffd700 ${percentRating}%, rgb(255, 251, 255) ${percentRating}%, rgb(255, 251, 255) 100%)`,
@@ -78,7 +78,7 @@ export default async function Appstores({language}:Props){
                 <a className={s.badge} href={`https://apps.apple.com/app/arsenal-armamentarium/id6670214648`} target="_blank">
                     <img src={getIosBadge(language)} width="100%" alt="AppleAppstore Download Link" />
                 </a>
-                <div className={`${s.rating} mobile`} title={ratingText}>
+                <div className={`${s.rating} ${s.mobile}`} title={ratingText}>
                     <div className={s.star}>
                         <span className={s.stars} style={{
                             background: `linear-gradient(90deg, #ffd700 0%, #ffed4e ${percentRating/2}%, #ffd700 ${percentRating}%, rgb(255, 251, 255) ${percentRating}%, rgb(255, 251, 255) 100%)`,
