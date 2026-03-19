@@ -21,6 +21,10 @@ export default function Footer({language}:Props){
                 link: "nldp",
                 name: "Déclaration de confidentialité"
             },
+            it: {
+                link: "privacy",
+                name: "Informativa sulla privacy"
+            },
         },
         imprint: {
             de: {
@@ -34,6 +38,10 @@ export default function Footer({language}:Props){
             fr: {
                 link: "legales",
                 name: "Mentions légales"
+            },
+            it: {
+                link: "impronta",
+                name: "Impronta"
             },
         }
     }
