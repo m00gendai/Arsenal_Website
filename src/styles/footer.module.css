@@ -31,6 +31,6 @@
 
 .image{
     width: 3rem;
-    fill: var(--primary);
     margin: 1rem;
+    fill: var(--on-background);
 }
