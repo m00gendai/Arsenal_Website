@@ -64,20 +64,22 @@
     box-shadow: 0px 0px 5px 0px var(--shadow);
 }
 
-#flag_de,
-#flag_mobile_de{
+#flag_de{
     background-image: url("/assets/de.png");
 }
 
-#flag_en,
-#flag_mobile_en{
+#flag_en{
     background-image: url("/assets/en.png");
 }
 
-#flag_fr,
-#flag_mobile_fr{
+#flag_fr{
     background-image: url("/assets/fr.png");
 }
+
+#flag_it{
+    background-image: url("/assets/it.png");
+}
+
 
 
 #hamburger,
