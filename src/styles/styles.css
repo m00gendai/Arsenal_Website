@@ -77,6 +77,10 @@ strong{
     color: var(--primary);
 }
 
+a {
+    color: var(--tertiary);
+}
+
 .content{
     position: relative;
     padding: 1rem;
