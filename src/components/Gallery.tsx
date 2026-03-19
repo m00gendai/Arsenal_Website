@@ -9,17 +9,25 @@ import screen8 from '../assets/screen8.jpg';
 import s from "../styles/gallery.module.css"
 
 export default function Gallery(){
+
+    const images = [screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8]
+
     return(
         <section className="content">
             <div className={s.gallery}>
-                <div className={s.image}><img src={screen1.src} width="100%" alt="App Screenshot 1"/></div>
-                <div className={s.image}><img src={screen2.src} width="100%" alt="App Screenshot 2"/></div>
-                <div className={s.image}><img src={screen3.src} width="100%" alt="App Screenshot 3"/></div>
-                <div className={s.image}><img src={screen4.src} width="100%" alt="App Screenshot 4"/></div>
-                <div className={s.image}><img src={screen5.src} width="100%" alt="App Screenshot 5"/></div>
-                <div className={s.image}><img src={screen6.src} width="100%" alt="App Screenshot 6"/></div>
-                <div className={s.image}><img src={screen7.src} width="100%" alt="App Screenshot 7"/></div>
-                <div className={s.image}><img src={screen8.src} width="100%" alt="App Screenshot 8"/></div>
+                {images.map((image, index) => {
+                    return (
+                        <div 
+                        key={`image_screen_${index}`}
+                            className={s.image} 
+                            style={{
+                                aspectRatio: `${image.width/image.height}/1`
+                            }}
+                        >
+                            <img src={image.src} alt={`App Screenshot ${index+1}`}/>
+                        </div>
+                    )
+                })}
             </div>
         </section>
     )
