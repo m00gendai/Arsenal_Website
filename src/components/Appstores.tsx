@@ -2,9 +2,11 @@ import type { Language } from "../types/types_global"
 import androidBadge_de from "../assets/android_de.svg"
 import androidBadge_en from "../assets/android_en.svg"
 import androidBadge_fr from "../assets/android_fr.svg"
+import androidBadge_it from "../assets/android_it.svg"
 import iosBadge_de from "../assets/ios_de.svg"
 import iosBadge_en from "../assets/ios_en.svg"
 import iosBadge_fr from "../assets/ios_fr.svg"
+import iosBadge_it from "../assets/ios_it.svg"
 import s from "../styles/appstores.module.css"
 import { starsText } from "../text/text_appstores"
 
@@ -39,6 +41,8 @@ export default async function Appstores({language}:Props){
                 return androidBadge_en.src
             case "fr":
                 return androidBadge_fr.src
+            case "it":
+                return androidBadge_it.src
             default:
                 return androidBadge_en.src
         }
@@ -52,6 +56,8 @@ export default async function Appstores({language}:Props){
                 return iosBadge_en.src
             case "fr":
                 return iosBadge_fr.src
+            case "it":
+                return iosBadge_it.src
             default:
                 return iosBadge_en.src
         }
