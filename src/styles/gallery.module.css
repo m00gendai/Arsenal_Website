@@ -12,6 +12,7 @@
     overflow: hidden;
     object-fit: contain;
     border: 2px solid var(--outline);
+    background: var(--on-surface-variant);
 }
 
 .image img{

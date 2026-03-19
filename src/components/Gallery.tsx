@@ -24,7 +24,7 @@ export default function Gallery(){
                                 aspectRatio: `${image.width/image.height}/1`
                             }}
                         >
-                            <img src={image.src} alt={`App Screenshot ${index+1}`}/>
+                            <img loading="lazy" src={image.src} alt={`App Screenshot ${index+1}`}/>
                         </div>
                     )
                 })}
