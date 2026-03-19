@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import type { Language } from "../types/types_global"
 import s from "../styles/navbar.module.css"
+import { section_collectionItems_title, section_supportedCalibers } from "../text/text_details"
 
 interface Props{
     language: Language
@@ -55,7 +56,7 @@ export default function Navbar({language}:Props){
                 <div id={s.hamburger} onClick={()=>hamburgerMenu()}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
                 </div>
-                {visible ? <div id={s.mobileContainer}>
+                {visible ? <div className={s.mobileContainer}>
                     <ul className={s.flags_mobile}>
                         <li>
                             <a href={`/de/${target}`} className={s.flag} id={s.flag_de} aria-label="Deutsch"></a>
@@ -69,13 +70,15 @@ export default function Navbar({language}:Props){
                     </ul>
                     <ul className={s.anchors_mobile}>
                         <li>
-                            <a href={`/${language}`}>Home</a>
+                            <a className={s.link} href={`/${language}`}>Home</a>
+                        </li>
+                        <li className={s.mobileMenu}>
+                            <a className={s.link} href={`/${language}/details`}>Details</a>
+                            <a className={s.sublink} href={`/${language}/details#supportedCollections`}>{section_collectionItems_title.title[language]}</a>
+                            <a className={s.sublink} href={`/${language}/details#supportedCalibers`}>{section_supportedCalibers.title[language]}</a>
                         </li>
                         <li>
-                            <a href={`/${language}/details`}>Details</a>
-                        </li>
-                        <li>
-                            <a href={`/${language}/faq`}>FAQ</a>
+                            <a className={s.link} href={`/${language}/faq`}>FAQ</a>
                         </li>
                     </ul>
                 </div> : null}

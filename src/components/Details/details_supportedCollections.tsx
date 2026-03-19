@@ -1,7 +1,6 @@
 import React from "react";
 import { section_collectionItems_accessories, section_collectionItems_literature, section_collectionItems_main, section_collectionItems_parts, section_collectionItems_title } from "../../text/text_details";
 import type { Language } from "../../types/types_global";
-import gunCollectionImage from "../../assets/collections/gunCollection.jpg"
 import s from "../../styles/supportedCollections.module.css"
 
 interface Props{
@@ -51,7 +50,7 @@ export default function Details_supportedCollections({language}:Props){
 
     return (
         <>
-            <h2>{section_collectionItems_title.title[language]}</h2>
+            <h2 id="supportedCollections" >{section_collectionItems_title.title[language]}</h2>
             <p dangerouslySetInnerHTML={{__html: section_collectionItems_title.text[language]}}></p>
             {collections.map((collection, index) => {
                 const collectionTitles = collection.text[language].filter(entry => typeof entry !== "object" && entry !== null && !Array.isArray(entry)) as string[]

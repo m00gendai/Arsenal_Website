@@ -10,7 +10,7 @@ interface Props{
 export default function Details_supportedCalibers({language}:Props){
     return(
         <>
-            <h2>{section_supportedCalibers.title[language]}</h2>
+            <h2 id="supportedCalibers">{section_supportedCalibers.title[language]}</h2>
             {section_supportedCalibers.text[language].map((text, index) => {
                 return <p key={`text_index${index}`} dangerouslySetInnerHTML={{__html: text}}></p>
             })}
