@@ -18,7 +18,7 @@ export default function Navbar({language}:Props){
 
     useEffect(() => {
         const path = window.location.pathname
-        setTarget(path.replace(/^\/(de|en|fr)\/?/, ""))
+        setTarget(path.replace(/^\/(de|en|fr|it)\/?/, ""))
     }, [])
 
     return (
@@ -46,6 +46,9 @@ export default function Navbar({language}:Props){
                         <li>
                             <a href={`/fr/${target}`} className={s.flag} id={s.flag_fr} aria-label="Francais"></a>
                         </li>
+                        <li>
+                            <a href={`/it/${target}`} className={s.flag} id={s.flag_it} aria-label="Italiano"></a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -66,6 +69,9 @@ export default function Navbar({language}:Props){
                         </li>
                         <li>
                             <a href={`/fr/${target}`} className={s.flag} id={s.flag_fr} aria-label="Francais"></a>
+                        </li>
+                        <li>
+                            <a href={`/it/${target}`} className={s.flag} id={s.flag_it} aria-label="Italiano"></a>
                         </li>
                     </ul>
                     <ul className={s.anchors_mobile}>
