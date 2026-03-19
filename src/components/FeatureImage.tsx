@@ -35,7 +35,7 @@ export default function FeatureImage({language}:Props){
             backgroundSize: "contain",
         }}>
             <div className={s.wrapper}>
-                <img src={getFeatureImage(language).src} width={getFeatureImage(language).width} height={getFeatureImage(language).height} alt={metadata_featureImageAlt[language]} className={s.image}/>
+                <img fetchPriority="high" src={getFeatureImage(language).src} width={getFeatureImage(language).width} height={getFeatureImage(language).height} alt={metadata_featureImageAlt[language]} className={s.image}/>
             </div>
         </section>
     )
