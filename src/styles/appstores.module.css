@@ -67,6 +67,9 @@
     .rating{
         margin: 2rem 0 0 0;
     }
+    .desktop{
+        display: none;
+    }
 }
 
 @media only screen and (min-aspect-ratio: 13/9){
@@ -75,5 +78,8 @@
     }
     .stars{
         font-size: 5rem;
+    }
+    .mobile{
+        display: none;
     }
 }
