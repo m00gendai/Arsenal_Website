@@ -1,7 +1,8 @@
 import React from "react";
-import { section_collectionItems_accessories, section_collectionItems_literature, section_collectionItems_main, section_collectionItems_parts, section_collectionItems_title } from "../../text/text_details";
+import { section_collectionItems_accessories, section_collectionItems_literature, section_collectionItems_main, section_collectionItems_parts, section_collectionItems_reloading, section_collectionItems_title } from "../../text/text_details";
 import type { Language } from "../../types/types_global";
 import s from "../../styles/supportedCollections.module.css"
+import t from "../../styles/accordion.module.css"
 
 interface Props{
     language: Language
@@ -13,7 +14,8 @@ export default function Details_supportedCollections({language}:Props){
         section_collectionItems_main, 
         section_collectionItems_accessories, 
         section_collectionItems_parts, 
-        section_collectionItems_literature
+        section_collectionItems_literature,
+        section_collectionItems_reloading
     ]
 
    function getIcon(title: { name: string }){
@@ -41,6 +43,8 @@ export default function Details_supportedCollections({language}:Props){
                     return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
                 case "bookCollection":
                     return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bookshelf</title><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg>
+                case "dieCollection":
+                    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lightbulb-cfl-spiral</title><path d="M11 2C10.84 2 10.69 2.03 10.55 2.1L8.55 3.1C7.56 3.66 8 5 9 5C9.16 5 9.32 4.95 9.45 4.9L11.45 3.9C12.43 3.36 12 2 11 2M15 4C14.83 4 14.69 4.03 14.55 4.1L8.55 7.1C7.56 7.68 8 9 9 9C9.18 9 9.32 8.95 9.45 8.9L15.45 5.9C16.41 5.43 16 4 15 4M15 8C14.84 8 14.69 8.03 14.55 8.1L8.7 11.03C8.2 11.25 8 11.6 8 12V14H7V17C7 17.55 7.44 18 8 18H16C16.55 18 17 17.55 17 17V14H16V13C16 12.44 15.55 12 15 12C14.45 12 14 12.45 14 13V14H10V12.62L15.45 9.9C16.42 9.34 16 8 15 8M9 20V21C9 21.57 9.46 22 10 22H14C14.56 22 15 21.55 15 21V20" /></svg>
                 default: 
                     return ""
             }
@@ -63,21 +67,24 @@ export default function Details_supportedCollections({language}:Props){
                         <div className={s.container}>
                             {Array.from(new Array(collectionTitles.length)).map((entry, indx) => {
                                 return (
-                                    <React.Fragment key={`details_${indx}`}>
-                                        <div className={s.inner} >
+                                    <details className={t.details} key={`entry_${index}`}>
+                                        <summary className={t.summary}>
                                             <div className={s.title}>
                                                 <div className={s.title_content}>
                                                     {getIcon(collectionName[indx])}
-                                                    <h4>{`${collectionTitles[indx]}`}</h4>
+                                                    <p>{`${collectionTitles[indx]}`}</p>
                                                 </div>
-                                            </div>
+                                            </div>   
+                                        </summary>
+                                        <div className={t.content}>
                                             <ul className={s.list}>
                                                 {collectionContent[indx] && collectionContent[indx].map((entry, ind) => {
                                                     return <li key={`accordion_listItem_${ind}`} dangerouslySetInnerHTML={{__html: entry}}></li>
                                                 })}
                                             </ul>
                                         </div>
-                                    </React.Fragment>
+                                    </details>
+
                                 )
                             })}
                         </div>
