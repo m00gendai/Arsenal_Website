@@ -1,5 +1,5 @@
 import { getCaliberCount } from "../lib/caliberData";
-import { ammoCollection, barrelCollection, bookCollection, conversionCollection, gunCollection, lightLaserCollection, magazineCollection, miscAccessoryCollection, opticCollection, scopeCollection, silencerCollection } from "../lib/itemData";
+import { ammoCollection, barrelCollection, bookCollection, conversionCollection, gunCollection, lightLaserCollection, magazineCollection, miscAccessoryCollection, opticCollection, scopeCollection, silencerCollection, dieCollection } from "../lib/itemData";
 import { dataTemplate_Translations, excludedKeysForDataTemplates, tabBarLabels } from "../lib/itemData_translations";
 import type { Language, SimpleTranslation, SimpleTranslation_StringArray, SimpleTranslation_StringArrayName } from "../types/types_global";
 
@@ -82,6 +82,14 @@ function buildSectionLiterature(lang: Language) {
         getTranslatedTitle("bookCollection", lang),
         getTranslatedData(bookCollection, lang),
         {name: "bookCollection"},
+    ]
+}
+
+function buildSectionReloading(lang: Language) {
+    return [
+        getTranslatedTitle("dieCollection", lang),
+        getTranslatedData(dieCollection, lang),
+        {name: "dieCollection"},
     ]
 }
 
@@ -169,6 +177,21 @@ export const section_collectionItems_literature: collectionSection = {
         en: buildSectionLiterature("en"),
         fr: buildSectionLiterature("fr"),
         it: buildSectionLiterature("it"),
+    }
+}
+
+export const section_collectionItems_reloading: collectionSection = {
+    title: {
+        de: `Wiederladen`,
+        en: `Reloading`,
+        fr: `Rechargement`,
+        it: `Ricarica`
+    },
+    text: {
+        de: buildSectionReloading("de"),
+        en: buildSectionReloading("en"),
+        fr: buildSectionReloading("fr"),
+        it: buildSectionReloading("it"),
     }
 }
 

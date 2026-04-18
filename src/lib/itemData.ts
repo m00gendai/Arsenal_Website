@@ -344,8 +344,26 @@ export const literatureMiscCollection = [
     
 ]
 
-export const diesCollection = [
-    
+export const dieCollection = [
+    "id",
+    "createdAt",
+    "lastModifiedAt",
+    "images",
+    "tags",
+    "manufacturer",
+    "model",
+    "caliber",
+    "dieSeries",
+    "group",
+    "partNumber",
+    "shellHolder",
+    "acquisitionDate_unix",
+    "paidPrice",
+    "boughtFrom",
+    "marketValue",
+    "remarks",
+    "customInventoryDesignation",
+    "qrCode",
 ]
 
 export const bulletCollection = [

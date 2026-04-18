@@ -62,6 +62,10 @@ interface DataTemplateTranslations {
     bulletWeight: DataTemplateTranslation
     footprint: DataTemplateTranslation
     customInventoryDesignation: DataTemplateTranslation
+    dieSeries: DataTemplateTranslation
+    group: DataTemplateTranslation
+    partNumber: DataTemplateTranslation
+    shellHolder: DataTemplateTranslation
 }
 
 interface DataTemplateTranslationRemarks {
@@ -94,7 +98,7 @@ export interface tabBarLabels{
     printMagazineCollection: SimpleTranslation
     swissMilitaryRegulationCollection: SimpleTranslation
     literatureMiscCollection: SimpleTranslation
-    diesCollection: SimpleTranslation
+    dieCollection: SimpleTranslation
     bulletCollection: SimpleTranslation
     caseCollection: SimpleTranslation
     primerCollection: SimpleTranslation
@@ -569,7 +573,39 @@ export const dataTemplate_Translations: DataTemplateTranslations = {
         fr: "Désignation d’inventaire personnalisée",
         it: "Designazione inventariale personalizzata",
         ch: "Designaziun d’inventari persunalisada"
-    }
+    },
+        "dieSeries":{
+        name: "dieSeries",
+        de: "Edition",
+        en: "Series",
+        fr: "Série",
+        it: "Serie",
+        ch: "Seria",
+    },
+    "group":{
+        name: "group",
+        de: "Gruppe",
+        en: "Group",
+        fr: "Groupe",
+        it: "Gruppo", 
+        ch: "Gruppa"
+    },
+    "partNumber": {
+        name: "partNumber",
+        de: "Teilenummer",
+        en: "Part Number",
+        fr: "Référence",
+        it: "Numero di parte", 
+        ch: "Numer da part"
+    },
+    "shellHolder": {
+        name: "shellHolder",
+        de: "Hülsenhalter",
+        en: "Shell Holder",
+        fr: "Griffe de maintien d'étui",
+        it: "Porta bossolo", 
+        ch: "Tegnider da cartutsch"
+    },
 }
 
 export const dataTemplate_TranslationRemarks: DataTemplateTranslationRemarks = {
@@ -749,7 +785,7 @@ export const tabBarLabels: tabBarLabels = {
         it: "Varie",
         ch: "Diverses", 
     },
-    diesCollection:{
+    dieCollection:{
         de: "Matritzen",
         en: "Dies",
         fr: "Recharger des cartouches",
