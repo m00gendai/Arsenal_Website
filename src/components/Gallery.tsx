@@ -1,16 +1,24 @@
-import screen1 from '../assets/screen1.jpg';
-import screen2 from '../assets/screen2.jpg';
-import screen3 from '../assets/screen3.jpg';
-import screen4 from '../assets/screen4.jpg';
-import screen5 from '../assets/screen5.jpg';
-import screen6 from '../assets/screen6.jpg';
-import screen7 from '../assets/screen7.jpg';
-import screen8 from '../assets/screen8.jpg';
 import s from "../styles/gallery.module.css"
+import type { Language } from "../types/types_global"
 
-export default function Gallery(){
+interface Props{
+    language: Language
+}
 
-    const images = [screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8]
+export default function Gallery({language}:Props){
+
+    const screenshots = import.meta.glob(`../assets/screenshots/Screen*.jpg`, { eager: true })
+    const filteredScreenshots = Object.entries(screenshots).filter(screen =>{
+        return screen[0].endsWith(`_${language}.jpg`)
+    })
+    const sortedScreenshots = filteredScreenshots.sort((a,b) => {
+        const x = a[0]
+        const y = b[0]
+        return x > y ? 1 : x < y ? -1 : 0
+    })
+    const images = sortedScreenshots.map(screen => {
+        return screen[1].default
+    })
 
     return(
         <section className="content">
