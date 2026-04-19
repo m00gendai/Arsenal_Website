@@ -6,10 +6,10 @@ interface Props{
     language: Language
 }
 
-export default function Details({language}:Props){
+export default function FAQ({language}:Props){
     return (
         <section className="content" id="faq">
-            <h2>{title[language]}</h2>
+            <h1>{title[language]}</h1>
             <Faq_accordions language={language} />
         </section>
     )
