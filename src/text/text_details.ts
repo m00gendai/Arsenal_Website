@@ -1,17 +1,23 @@
 import { getCaliberCount } from "../lib/caliberData";
-import { ammoCollection, barrelCollection, bookCollection, conversionCollection, gunCollection, lightLaserCollection, magazineCollection, miscAccessoryCollection, opticCollection, scopeCollection, silencerCollection } from "../lib/itemData";
+import { ammoCollection, barrelCollection, bookCollection, conversionCollection, gunCollection, lightLaserCollection, magazineCollection, miscAccessoryCollection, opticCollection, scopeCollection, silencerCollection, dieCollection } from "../lib/itemData";
 import { dataTemplate_Translations, excludedKeysForDataTemplates, tabBarLabels } from "../lib/itemData_translations";
-import type { Language, SimpleTranslation, SimpleTranslation_StringArray } from "../types/types_global";
+import type { Language, SimpleTranslation, SimpleTranslation_StringArray, SimpleTranslation_StringArrayName } from "../types/types_global";
 
 interface Section{
     title: SimpleTranslation
     text: SimpleTranslation_StringArray
 }
 
+interface collectionSection{
+    title: SimpleTranslation
+    text: SimpleTranslation_StringArrayName
+}
+
 export const title: SimpleTranslation ={
     de: "Details",
     en: "Details",
     fr: "Détails",
+    it: "Dettagli"
 }
 
 function getTranslatedData(fields: string[], lang: Language){
@@ -30,8 +36,10 @@ function buildSectionMain(lang: Language) {
     return [
         getTranslatedTitle("gunCollection", lang),
         getTranslatedData(gunCollection, lang),
+        {name: "gunCollection"},
         getTranslatedTitle("ammoCollection", lang),
         getTranslatedData(ammoCollection, lang),
+        {name: "ammoCollection"},
     ]
 }
 
@@ -39,16 +47,22 @@ function buildSectionAccessories(lang: Language) {
     return [
         getTranslatedTitle("silencerCollection", lang),
         getTranslatedData(silencerCollection, lang),
+        {name: "silencerCollection"},
         getTranslatedTitle("opticCollection", lang),
         getTranslatedData(opticCollection, lang),
+        {name: "opticCollection"},
         getTranslatedTitle("scopeCollection", lang),
         getTranslatedData(scopeCollection, lang),
+        {name: "scopeCollection"},
         getTranslatedTitle("lightLaserCollection", lang),
         getTranslatedData(lightLaserCollection, lang),
+        {name: "lightLaserCollection"},
         getTranslatedTitle("magazineCollection", lang),
         getTranslatedData(magazineCollection, lang),
+        {name: "magazineCollection"},
         getTranslatedTitle("miscAccessoryCollection", lang),
         getTranslatedData(miscAccessoryCollection, lang),
+        {name: "miscAccessoryCollection"},
     ]
 }
 
@@ -56,8 +70,10 @@ function buildSectionParts(lang: Language) {
     return [
         getTranslatedTitle("conversionCollection", lang),
         getTranslatedData(conversionCollection, lang),
+        {name: "conversionCollection"},
         getTranslatedTitle("barrelCollection", lang),
         getTranslatedData(barrelCollection, lang),
+        {name: "barrelCollection"},
     ]
 }
 
@@ -65,6 +81,15 @@ function buildSectionLiterature(lang: Language) {
     return [
         getTranslatedTitle("bookCollection", lang),
         getTranslatedData(bookCollection, lang),
+        {name: "bookCollection"},
+    ]
+}
+
+function buildSectionReloading(lang: Language) {
+    return [
+        getTranslatedTitle("dieCollection", lang),
+        getTranslatedData(dieCollection, lang),
+        {name: "dieCollection"},
     ]
 }
 
@@ -73,6 +98,7 @@ export const section_collectionItems_title: Section = {
         de: `Unterstützte Sammlungen`,
         en: `Supported Collections`,
         fr: `Collections soutenues`,
+        it: `Collezioni supportate`
     },
     text: {
         de: [
@@ -87,58 +113,85 @@ export const section_collectionItems_title: Section = {
                 `De nombreuses collections peuvent être créées avec Arsenal, des armes et munitions, aux accessoires comme les optiques, les silencieux et les lasers, en passant par les livres.
                 Les collections sont en constante évolution, avec notamment plus de littérature et la gestion de l’équipement de rechargement en cours de développement.`
             ],
+        it: [
+                `Con Arsenal si possono creare molte collezioni, dalle armi e munizioni, agli accessori come ottiche, silenziatori e laser, fino ai libri.
+                Le collezioni sono in continua espansione, con l’aggiunta di più letteratura e la gestione di attrezzature per il ricaricamento, ad esempio.`
+        ]
     }
 }
 
-export const section_collectionItems_main: Section = {
+export const section_collectionItems_main: collectionSection = {
     title: {
         de: `Hauptsammlungen`,
         en: `Main Collections`,
         fr: `Collections principales`,
+        it: `Collezioni principali`,
     },
     text: {
         de: buildSectionMain("de"),
         en: buildSectionMain("en"),
         fr: buildSectionMain("fr"),
+        it: buildSectionMain("it")
     }
 }
 
-export const section_collectionItems_accessories: Section = {
+export const section_collectionItems_accessories: collectionSection = {
     title: {
         de: `Zubehör`,
         en: `Accessories`,
         fr: `Accessoires`,
+        it: `Accessori`
     },
     text: {
         de: buildSectionAccessories("de"),
         en: buildSectionAccessories("en"),
         fr: buildSectionAccessories("fr"),
+        it: buildSectionAccessories("it"),
     }
 }
 
-export const section_collectionItems_parts: Section = {
+export const section_collectionItems_parts: collectionSection = {
     title: {
         de: `Waffenteile`,
         en: `Gun Parts`,
         fr: `Pièces d’arme`,
+        it: `Parti di armi`
     },
     text: {
         de: buildSectionParts("de"),
         en: buildSectionParts("en"),
         fr: buildSectionParts("fr"),
+        it: buildSectionParts("it"),
     }
 }
 
-export const section_collectionItems_literature: Section = {
+export const section_collectionItems_literature: collectionSection = {
     title: {
         de: `Literatur`,
         en: `Literature`,
         fr: `Littérature`,
+        it: `Letteratura`
     },
     text: {
         de: buildSectionLiterature("de"),
         en: buildSectionLiterature("en"),
         fr: buildSectionLiterature("fr"),
+        it: buildSectionLiterature("it"),
+    }
+}
+
+export const section_collectionItems_reloading: collectionSection = {
+    title: {
+        de: `Wiederladen`,
+        en: `Reloading`,
+        fr: `Rechargement`,
+        it: `Ricarica`
+    },
+    text: {
+        de: buildSectionReloading("de"),
+        en: buildSectionReloading("en"),
+        fr: buildSectionReloading("fr"),
+        it: buildSectionReloading("it"),
     }
 }
 
@@ -147,6 +200,7 @@ export const section_supportedCalibers: Section = {
         de: `Unterstützte Kaliber`,
         en: `Supported Calibers`,
         fr: `Calibres pris en charge`,
+        it: `Calibri supportati`
     },
     text: {
         de: [
@@ -168,6 +222,13 @@ export const section_supportedCalibers: Section = {
             calibre respecte ce format, mais lorsque vous importez vos propres données personnalisées, vous devrez peut-être modifier vos données de calibre au préalable.`,
             `Vous trouverez ci-dessous une liste des <strong>${getCaliberCount()} calibres</strong> et de leur format exact pris en charge par l’application. Si vous devez spécifier plusieurs calibres
             (par exemple si un revolver tire en .357 Magnum et en .38 Special), séparez-les par une virgule et un espace ", ":`,
+            `<code>.357 S&W Magnum, .38 S&W Special</code>`
+        ],
+        it: [
+             `Alcune funzionalità, come QuickShot, dipendono da un formato specifico del calibro. All’interno dell’app sono presenti dei limiti per garantire che il calibro segua questo formato,
+            ma quando si importano dati personalizzati, potrebbe essere necessario modificare i dati del calibro prima di importarli`,
+            `Di seguito è riportato un elenco dei <strong>${getCaliberCount()} calibri</strong> e del formato esatto che l’app supporta. Se è necessario specificare più calibri
+            (ad esempio, se un revolver spara sia .357 Magnum che .38 Special), separarli con una virgola e uno spazio «, «:`,
             `<code>.357 S&W Magnum, .38 S&W Special</code>`
         ]
     }

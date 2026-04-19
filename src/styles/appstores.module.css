@@ -20,7 +20,7 @@
 }
 
 .star{
-    position: realtive;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -41,19 +41,14 @@
 }
 
 .text{
-    position: realtive;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    color: var(--background);
+    color: var(--on-primary-container);
     font-weight: bold;
-}
-
-.android img{
-    border-radius: 15px;
-    border: 2px solid #a6a6a6;
 }
 
 @media only screen and (max-aspect-ratio: 13/9){
@@ -72,6 +67,9 @@
     .rating{
         margin: 2rem 0 0 0;
     }
+    .desktop{
+        display: none;
+    }
 }
 
 @media only screen and (min-aspect-ratio: 13/9){
@@ -80,5 +78,8 @@
     }
     .stars{
         font-size: 5rem;
+    }
+    .mobile{
+        display: none;
     }
 }
