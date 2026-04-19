@@ -7,6 +7,7 @@
 }
 
 .details{
+
     position: relative;
     width: 100%;
     background: var(--secondary-container);
@@ -39,11 +40,25 @@
 
 .list{
     margin: 0 1rem;
+    padding: 2rem 2rem 2rem calc(2rem + 40px);
+}
+
+.text:last-child{
+    margin: 0;
+    padding: 0 2rem 2rem 2rem
+}
+
+.text:first-child{
+    margin: 0;
+    padding: 2rem 2rem 1rem 2rem
+}
+
+.text:only-child {
     padding: 2rem;
-    list-style-position: inside;
 }
 
 .text{
     margin: 0;
-    padding: 2rem;
+    padding: 0 2rem 1rem 2rem
 }
+

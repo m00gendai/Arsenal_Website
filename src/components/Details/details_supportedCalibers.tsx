@@ -31,7 +31,7 @@ export default function Details_supportedCalibers({language}:Props){
                                 </div>
                             </summary>
                             <div className={t.content}>
-                                <ul className={s.list}>
+                                <ul className={s.list_single}>
                                     {range.variants.map((caliber, indx) => {
                                         return <li key={`caliber_${range}_${indx}`}>{caliber.name}</li>
                                     })}
